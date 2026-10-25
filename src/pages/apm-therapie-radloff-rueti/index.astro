@@ -14,6 +14,7 @@ import apmohrbefund from "./apm-therapie-radloff-ohrbefund-qifluss-praxis-rueti.
 import apmtherapie from "./apm-therapie-radloff-wide.jpg";
 import medizin from "./chinesische-medizin.jpg";
 import philosophie from "./qifluss-praxis-philosophie-2.jpg";
+import AddressBlock from "../../components/AddressBlock.astro";
 ---
 
 <Page
@@ -92,7 +93,7 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
         klassischen Akupunktur. Doch die APM Therapie nach Radloff unterscheidet
         sich in wesentlichen Punkten:
       </p>
-      <ol type="1">
+      <ul>
         <li>
           <b>Behandlung ohne Nadeln</b>: Die Meridiane werden sanft mit einem
           Metallstäbchen oder von Hand gestrichen. Das ist schmerzfrei und fühlt
@@ -114,7 +115,7 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
           werden nicht durch "Einrenken", sondern durch sanfte Impulse im
           energetischen Gleichgewicht korrigiert.
         </li>
-      </ol>
+      </ul>
     </div>
   </Section>
   <Section color="normal">
@@ -168,7 +169,7 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
       </ul>
     </div>
   </Section>
-  <Cards heading="Wie läuft eine APM-Behandlung in der Qi-Fluss-Praxis ab?">
+  <Cards heading="Wie läuft eine APM-Behandlung in der QiFluss-Praxis ab?">
     <Card number={1} image={apmanamnese}>
       <h3>Anamnesegespräch</h3>
       <p>
@@ -314,10 +315,8 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
         Möchten Sie Ihren Energiefluss aktivieren und Beschwerden nachhaltig
         lindern?
       </p>
-      <p>Besuchen Sie mich in der Qi-Fluss-Praxis in Rüti.</p>
-      <a class="button -blue" href="/booking-qifluss-praxis-rueti/"
-        >Termin vereinbaren</a
-      >
+      <p>Besuchen Sie mich in der QiFluss-Praxis in Rüti.</p>
+      <AddressBlock />
     </div>
   </Section>
 </Page>
