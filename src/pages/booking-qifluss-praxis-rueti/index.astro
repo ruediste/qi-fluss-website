@@ -18,47 +18,35 @@ import Page from "../../layouts/Page.astro";
   ]}
   image={panorama}
 >
-  <Section color="normal">
-    <div slot="left">
-      <iframe
-        src="https://app.healthadvisor.ch/bookings/bb23a154d18f45cfb53b8b91e3150fa4?loaderColor=%232576b9"
-        width="960"
-        height="50"
-        id="HA-online-booking-iframe-reference"
-        allowtransparency="true"
-        style="border: none;"
-        >Ohje, Ihr Browser unterstützt keine iframes!
-      </iframe>
+  <iframe
+    src="https://app.healthadvisor.ch/bookings/bb23a154d18f45cfb53b8b91e3150fa4?loaderColor=%232576b9"
+    height="50"
+    id="HA-online-booking-iframe-reference"
+    allowtransparency="true"
+    style="border: none;"
+    >Ohje, Ihr Browser unterstützt keine iframes!
+  </iframe>
 
-      <script>
-        window.addEventListener(
-          "message",
-          (event) => {
-            if (
-              event &&
-              event.data === "HealthAdvisor-OnlineBooking:scrollToTop"
-            ) {
-              document
-                .getElementById("HA-online-booking-iframe-reference")!
-                .scrollIntoView();
-            }
-            if (
-              event &&
-              /^HealthAdvisor-OnlineBooking:resize/.test(event.data)
-            ) {
-              const [, rawParams] = event.data.split("?");
-              const params = new URLSearchParams(rawParams);
-              const height = params.get("height");
+  <script>
+    window.addEventListener(
+      "message",
+      (event) => {
+        if (event && event.data === "HealthAdvisor-OnlineBooking:scrollToTop") {
+          document
+            .getElementById("HA-online-booking-iframe-reference")!
+            .scrollIntoView();
+        }
+        if (event && /^HealthAdvisor-OnlineBooking:resize/.test(event.data)) {
+          const [, rawParams] = event.data.split("?");
+          const params = new URLSearchParams(rawParams);
+          const height = params.get("height");
 
-              document.getElementById(
-                "HA-online-booking-iframe-reference",
-              )!.style.height = `${height}px`;
-            }
-          },
-          false,
-        );
-      </script>
-    </div>
-    <div slot="right"></div>
-  </Section>
+          document.getElementById(
+            "HA-online-booking-iframe-reference",
+          )!.style.height = `${height}px`;
+        }
+      },
+      false,
+    );
+  </script>
 </Page>
