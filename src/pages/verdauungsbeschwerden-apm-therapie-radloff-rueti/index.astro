@@ -11,6 +11,7 @@ import buddha from "./laternen.jpg";
 import zen from "./zen.jpg";
 import sitzecke from "../../assets/praxis-sitzecke.jpg";
 import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
+import AddressBlock from "../../components/AddressBlock.astro";
 ---
 
 <Page
@@ -32,7 +33,8 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
 >
   <Section>
     <h1 slot="left">
-      Verdauungsbeschwerden <br />nachhaltig behandeln<br />APM Therapie in Rüti&nbsp;ZH
+      Verdauungsbeschwerden <br />nachhaltig behandeln<br />APM Therapie in
+      Rüti&nbsp;ZH
     </h1>
     <div slot="right"></div>
   </Section>
@@ -65,10 +67,12 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
         Magen, Milz, Leber und Darm wird die aufgenommene Nahrung in nutzbares
         Qi (Lebensenergie) und Blut umgewandelt.
       </p>
-      <p><i>
-        „Ist der Fluss im Magen- oder Milz-Meridian gestört oder liegt ein
-        Schiefstand des Beckens vor, gerät die Magen-Darm-Dynamik ins Stocken –
-        Schmerzen, Blähungen oder Trägheit entstehen.“</i>
+      <p>
+        <i>
+          „Ist der Fluss im Magen- oder Milz-Meridian gestört oder liegt ein
+          Schiefstand des Beckens vor, gerät die Magen-Darm-Dynamik ins Stocken
+          – Schmerzen, Blähungen oder Trägheit entstehen.“</i
+        >
       </p>
       <h2>Typische Ursachen & Auslöser für Verdauungsprobleme:</h2>
       <ul>
@@ -246,14 +250,7 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
         Alltag. Ich freue mich darauf, Sie in der QiFluss Praxis in Rüti zu
         begrüssen!
       </p>
-      <p style="padding-top: 1.5rem;">QiFluss Praxis - Nina Steinmann</p>
-      <p>Ferrachstrasse 9, 8630 Rüti ZH</p>
-      <p>Telefon: 078 608 70 32</p>
-      <p>E-Mail: nina@qi-fluss-praxis.ch</p>
-      <a
-        class="button -blue"
-href="/booking-qifluss-praxis-rueti/"        style="max-width: 14rem;">Termin vereinbaren</a
-      >
+      <AddressBlock />
     </div>
   </Section>
 </Page>
