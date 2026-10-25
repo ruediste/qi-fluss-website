@@ -1,4 +1,5 @@
 ---
+import { getImage } from "astro:assets";
 import PageBase from "./PageBase.astro";
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
 };
 
 const { title, description, image, keywords } = Astro.props;
+var img = await getImage({ src: image, widths: [300, 600, 1200, 2400] });
 ---
 
 <PageBase
@@ -17,7 +19,8 @@ const { title, description, image, keywords } = Astro.props;
   keywords={keywords}
   mainStyle={{}}
 >
-  <img id="page-main-image" src={image.src} alt="" />
+  <!-- <Image id="page-main-image" src={image} alt="" /> -->
+  <img id="page-main-image" srcset={img.srcSet.attribute} alt="" />
   <slot />
 </PageBase>
 

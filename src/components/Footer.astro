@@ -1,45 +1,51 @@
 ---
 const today = new Date();
+import { getImage } from "astro:assets";
 import teezeremonie from "./../assets/teezeremonie.jpeg";
+const img = await getImage({
+  src: teezeremonie,
+  widths: [300, 600, 1200, 2400],
+});
 ---
 
 <footer>
-    <div class="footer-content">
-        <div>QiFluss Praxis</div>
-        <div>Nina Steinmann</div>
-        <div>Ferrachstrasse 9</div>
-        <div>8630 Rüti ZH</div>
-        <div>Telefon 078 608 70 32</div>
-    </div>
+  <img class="footer-background" srcset={img.srcSet.attribute} alt="" />
+  <div class="footer-content">
+    <div>QiFluss Praxis</div>
+    <div>Nina Steinmann</div>
+    <div>Ferrachstrasse 9</div>
+    <div>8630 Rüti ZH</div>
+    <div>Telefon 078 608 70 32</div>
+  </div>
 </footer>
 <style>
-    footer {
-        position: relative;
-        min-height: 240px;
-        padding: 2rem 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        background-image: url("/src/assets/teezeremonie.jpeg");
-        background-size: cover;
-        background-position: center;
-        color: white;
-    }
+  footer {
+    position: relative;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
 
-    footer::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.25);
-    }
+  .footer-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
 
-    .footer-content {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-md);
-        backdrop-filter: blur(10px);
-        padding: var(--padding-md);
-    }
+  .footer-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    backdrop-filter: blur(10px);
+    padding: var(--padding-md);
+  }
 </style>

@@ -8,6 +8,7 @@ import title from "../assets/qifluss-praxis-schmerztherapie-rueti.jpeg";
 import CallToActionLink from "../components/CallToActionLink.astro";
 import Quote from "../components/Quote.astro";
 import Section from "../components/Section.astro";
+import SectionImage from "../components/SectionImage.astro";
 import Stack from "../components/Stack.astro";
 import Page from "../layouts/Page.astro";
 ---
@@ -56,8 +57,8 @@ import Page from "../layouts/Page.astro";
   </Section>
   <Section color="normal">
     <Stack slot="left">
-      <img
-        src={philosophie.src}
+      <SectionImage
+        src={philosophie}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack>
@@ -118,7 +119,7 @@ import Page from "../layouts/Page.astro";
       </ul>
     </div>
     <Stack slot="right">
-      <img src={apm.src} alt="Sitting Buddha" />
+      <SectionImage src={apm} alt="Sitting Buddha" />
       <CallToActionLink href={"booking-qifluss-praxis-rueti"}
         >{"APM Therapie buchen"}</CallToActionLink
       >
@@ -147,7 +148,7 @@ import Page from "../layouts/Page.astro";
       </ul>
     </div>
     <Stack slot="right">
-      <img src={fussreflex.src} alt="Sitting Buddha" />
+      <SectionImage src={fussreflex} alt="Sitting Buddha" />
       <CallToActionLink href={"booking-qifluss-praxis-rueti"}
         >{"Fussreflexzonen Massage buchen"}</CallToActionLink
       >
@@ -155,7 +156,7 @@ import Page from "../layouts/Page.astro";
   </Section>
   <Section>
     <Stack slot="left">
-      <img src={portrait.src} alt="Nina Steinmann QiFluss Praxis" />
+      <SectionImage src={portrait} alt="Nina Steinmann QiFluss Praxis" />
     </Stack>
     <div slot="right" style="flex-grow: 3;">
       <h2>Nina Steinmann</h2>
@@ -189,8 +190,8 @@ import Page from "../layouts/Page.astro";
   </Section>
   <Section color="normal">
     <Stack slot="left">
-      <img
-        src={sitzecke.src}
+      <SectionImage
+        src={sitzecke}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack>

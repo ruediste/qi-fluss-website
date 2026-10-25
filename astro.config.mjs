@@ -20,13 +20,15 @@ export default defineConfig({
       options: {
         variants: [
           {
-            src: ["./src/assets/fonts/Montserrat-VariableFont_wght.ttf"],
+            src: ["./src/assets/fonts/Montserrat-VariableFont_wght.woff2"],
             weight: "100 900",
             style: "normal",
             display: "swap",
           },
           {
-            src: ["./src/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf"],
+            src: [
+              "./src/assets/fonts/Montserrat-Italic-VariableFont_wght.woff2",
+            ],
             weight: "100 900",
             style: "italic",
             display: "swap",
