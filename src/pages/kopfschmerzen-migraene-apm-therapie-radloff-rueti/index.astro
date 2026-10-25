@@ -1,15 +1,15 @@
 ---
+import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
+import sitzecke from "../../assets/praxis-sitzecke.jpg";
 import CallToActionLink from "../../components/CallToActionLink.astro";
+import Faq from "../../components/Faq.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import Section from "../../components/Section.astro";
 import Stack from "../../components/Stack.astro";
-import FaqSection from "../../components/FaqSection.astro";
-import Faq from "../../components/Faq.astro";
 import Page from "../../layouts/Page.astro";
-import torji from "./torij-japan.jpg";
 import buddha from "./buddha-schlafend.jpg";
 import shinto from "./shinto.jpg";
-import sitzecke from "../../assets/praxis-sitzecke.jpg";
-import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
+import torji from "./torij-japan.jpg";
 ---
 
 <Page
@@ -48,27 +48,29 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
         Körper.
       </p>
       <p>
-        In der <strong>QiFluss Praxis</strong> in Rüti ZH begegne ich Migräne mit der <strong
-          >APM Therapie nach Radloff</strong
-        >. Diese hochentwickelte, ganzheitliche Behandlungsmethode verbindet das
-        Jahrtausende alte Wissen der Traditionellen Chinesischen Medizin (TCM)
-        mit präziser manueller Statik- und Wirbelsäulenbehandlung.
+        In der <strong>QiFluss Praxis</strong> in Rüti ZH begegne ich Migräne mit
+        der <strong>APM Therapie nach Radloff</strong>. Diese hochentwickelte,
+        ganzheitliche Behandlungsmethode verbindet das Jahrtausende alte Wissen
+        der Traditionellen Chinesischen Medizin (TCM) mit präziser manueller
+        Statik- und Wirbelsäulenbehandlung.
       </p>
     </div>
   </Section>
   <Section color="normal">
-    <div slot="left" >
+    <div slot="left">
       <h2>Warum Migräne entsteht – Die Sichtweise der Radloff-Methode</h2><p>
         Nach Klaus Radloff – dem Begründer der modernen APM nach Radloff – ist
         Migräne selten ein isoliertes Problem des Kopfes. Vielmehr liegt ihr
         eine energetische und strukturelle Dysbalance im gesamten Körper
         zugrunde.
       </p>
-      <p> <i>
-        „Der Kopf ist der höchste Punkt des Körpers. Staut sich Energie in den
-        Meridianen (z. B. Gallenblasen- oder Blasen-Meridian) oder liegt ein
-        Schiefstand des Beckens vor, gerät das Gesamtsystem unter Druck – die
-        Migräne entsteht.“</i>
+      <p>
+        <i>
+          „Der Kopf ist der höchste Punkt des Körpers. Staut sich Energie in den
+          Meridianen (z. B. Gallenblasen- oder Blasen-Meridian) oder liegt ein
+          Schiefstand des Beckens vor, gerät das Gesamtsystem unter Druck – die
+          Migräne entsteht.“</i
+        >
       </p>
     </div>
     <div slot="right">
@@ -190,7 +192,9 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
             Körperstatik (Becken und Wirbelsäule).
           </p>
         </Faq>
-        <Faq title="Wie viele APM Therapie Behandlungen sind bei Migräne notwendig?">
+        <Faq
+          title="Wie viele APM Therapie Behandlungen sind bei Migräne notwendig?"
+        >
           <p>
             Da Migräne oft ein chronisches Geschehen ist, empfiehlt sich zu
             Beginn eine Serie von ca. 5 bis 8 Behandlungen. Häufig berichten
@@ -198,7 +202,6 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
             spürbaren Abnahme der Anfallshäufigkeit und -intensität.
           </p>
         </Faq>
-       
       </FaqSection>
     </div>
   </Section>
@@ -218,7 +221,7 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
       </p>
       <a
         class="button -blue"
-        href={`${import.meta.env.BASE_URL}/booking-qifluss-praxis-rueti/`}
+        href="/booking-qifluss-praxis-rueti/"
         style="max-width: 14rem;">Termin vereinbaren</a
       >
     </div>

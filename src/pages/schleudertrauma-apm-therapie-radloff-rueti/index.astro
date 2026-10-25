@@ -1,15 +1,15 @@
 ---
+import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
+import sitzecke from "../../assets/praxis-sitzecke.jpg";
 import CallToActionLink from "../../components/CallToActionLink.astro";
+import Faq from "../../components/Faq.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import Section from "../../components/Section.astro";
 import Stack from "../../components/Stack.astro";
-import FaqSection from "../../components/FaqSection.astro";
-import Faq from "../../components/Faq.astro";
 import Page from "../../layouts/Page.astro";
-import meer from "./meer-felsen.jpg";
-import buddha from "./buddha-bw.jpg";
 import berg from "./berg-steinmann.jpg";
-import sitzecke from "../../assets/praxis-sitzecke.jpg";
-import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
+import buddha from "./buddha-bw.jpg";
+import meer from "./meer-felsen.jpg";
 ---
 
 <Page
@@ -29,8 +29,8 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
 >
   <Section>
     <h1 slot="left">
-      Schleudertrauma & HWS-Beschwerden<br />ganzheitlich behandeln<br /> APM
-      Therapie in RütiZH
+      Schleudertrauma & HWS-Beschwerden<br />ganzheitlich behandeln<br /> APM Therapie
+      in RütiZH
     </h1>
     <div slot="right"></div>
   </Section>
@@ -64,9 +64,11 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
         APM Therapie führt dieser abrupte mechanische Schock zu zweierlei
         Störungen:
       </p>
-      <p><i>
-        „Schmerz ist der Hilferuf des Gewebes nach fliessender Energie. Wo das
-        Qi (die Lebensenergie) staut oder fehlt, entsteht Schmerz.“</i>
+      <p>
+        <i>
+          „Schmerz ist der Hilferuf des Gewebes nach fliessender Energie. Wo das
+          Qi (die Lebensenergie) staut oder fehlt, entsteht Schmerz.“</i
+        >
       </p>
       <h2>Typische Spätfolgen & Begleitsymptome eines Schleudertraumas:</h2>
 
@@ -80,7 +82,7 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
         </li>
         <li>Kiefergelenksbeschwerden (CMD) durch die biomechanische Kette</li>
       </ul>
-    </div>  
+    </div>
     <div slot="right">
       <img
         src={buddha.src}
@@ -222,7 +224,6 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
             korrigiert, bleibt der Zug auf den Nacken bestehen.
           </p>
         </Faq>
-        
       </FaqSection>
     </div>
   </Section>
@@ -242,7 +243,7 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
       </p>
       <a
         class="button -blue"
-        href={`${import.meta.env.BASE_URL}/booking-qifluss-praxis-rueti/`}
+        href="/booking-qifluss-praxis-rueti/"
         style="max-width: 14rem;">Termin vereinbaren</a
       >
     </div>

@@ -7,7 +7,8 @@ import path from "path";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ruediste.github.io",
+  site: "https://qi-fluss-praxis.ch",
+  base: "/",
   // base: "/qi-fluss-website",
   integrations: [mdx(), sitemap()],
   fonts: [

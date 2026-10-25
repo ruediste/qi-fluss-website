@@ -1,15 +1,15 @@
 ---
+import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
+import sitzecke from "../../assets/praxis-sitzecke.jpg";
 import CallToActionLink from "../../components/CallToActionLink.astro";
+import Faq from "../../components/Faq.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import Section from "../../components/Section.astro";
 import Stack from "../../components/Stack.astro";
-import FaqSection from "../../components/FaqSection.astro";
-import Faq from "../../components/Faq.astro";
 import Page from "../../layouts/Page.astro";
-import wald from "./wald-sonne.jpg";
 import buddha from "./buddha-teich.jpg";
 import fluss from "./fluss.jpg";
-import sitzecke from "../../assets/praxis-sitzecke.jpg";
-import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
+import wald from "./wald-sonne.jpg";
 ---
 
 <Page
@@ -64,8 +64,9 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
       </p>
       <p>
         <i>
-        „Schmerz ist der Hilferuf des Gewebes nach fliessender Energie. Wo das
-        Qi (die Lebensenergie) staut oder fehlt, entsteht Schmerz.“</i>
+          „Schmerz ist der Hilferuf des Gewebes nach fliessender Energie. Wo das
+          Qi (die Lebensenergie) staut oder fehlt, entsteht Schmerz.“</i
+        >
       </p>
       <h2>Typische Ursachen & Auslöser für chronische Schmerzen:</h2>
       <ul>
@@ -206,7 +207,6 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
     </Stack>
   </Section>
   <Section color="normal">
-   
     <div slot="right">
       <h2>Häufig gestellte Fragen FAQ's</h2>
       <FaqSection>
@@ -221,7 +221,9 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
             lösen.
           </p>
         </Faq>
-        <Faq title="Tut die APM Therapie-Behandlung bei chronischen Schmerzen weh?">
+        <Faq
+          title="Tut die APM Therapie-Behandlung bei chronischen Schmerzen weh?"
+        >
           <p>
             Nein, die Behandlung ist sehr sanft und wohltuend. Es werden keine
             Nadeln verwendet. Die Mobilisation von Becken und Wirbelsäule
@@ -229,7 +231,9 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
             Körpers.
           </p>
         </Faq>
-        <Faq title="Wie viele APM Therapie-Behandlungen sind bei chronischen Schmerzen notwendig?">
+        <Faq
+          title="Wie viele APM Therapie-Behandlungen sind bei chronischen Schmerzen notwendig?"
+        >
           <p>
             Das ist individuell sehr unterschiedlich. In der Regel sind 3-5
             Behandlungen im Abstand von 1-2 Wochen sinnvoll, um den Körper
@@ -256,7 +260,7 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
       </p>
       <a
         class="button -blue"
-        href={`${import.meta.env.BASE_URL}/booking-qifluss-praxis-rueti/`}
+        href="/booking-qifluss-praxis-rueti/"
         style="max-width: 14rem;">Termin vereinbaren</a
       >
     </div>
