@@ -1,0 +1,85 @@
+---
+import type { ImageMetadata } from "astro";
+import CallToActionLink from "./CallToActionLink.astro";
+
+type Props = {
+  number?: number;
+  action?: { label: string; href: string };
+  image?: ImageMetadata;
+  color?: "white";
+};
+
+const { number, action, image, color } = Astro.props;
+---
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+    gap: "var(--space-md)",
+    backgroundColor: color === "white" ? "white" : "#f1f1f1",
+  }}
+>
+  {image && <img src={image.src} />}
+  <div
+    class={"card-content" + (action ? " action" : "")}
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "1rem",
+    }}
+  >
+    {
+      number && (
+        <div>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "3rem",
+              height: "3rem",
+              fontSize: "1.75rem",
+              fontWeight: "bold",
+              backgroundColor: "black",
+              color: "white",
+              borderRadius: "50%",
+              lineHeight: 1,
+            }}
+          >
+            {number}
+          </div>
+        </div>
+      )
+    }
+
+    <slot />
+  </div>
+  {
+    action && (
+      <CallToActionLink href={action.href}>{action.label}</CallToActionLink>
+    )
+  }
+</div>
+
+<style lang="scss">
+  .card-content {
+    padding: 0 var(--padding-md);
+    &:not(.action) {
+      padding-bottom: var(--padding-md);
+    }
+  }
+  @media (max-width: #{$mobile-breakpoint}) {
+    img {
+      padding: 0 var(--padding-lg);
+      padding-top: var(--padding-lg);
+    }
+    .card-content {
+      padding: 0 var(--padding-lg);
+      &:not(.action) {
+        padding-bottom: var(--padding-lg);
+      }
+    }
+  }
+</style>

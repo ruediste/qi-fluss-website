@@ -1,0 +1,33 @@
+---
+type Props = { heading?: string };
+
+const { heading } = Astro.props;
+---
+
+<div class="cards">
+  {heading && <h2 style=" grid-column: 1 / -1;">{heading}</h2>}
+  <slot />
+</div>
+
+<style lang="scss">
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: var(--space-lg);
+    box-sizing: border-box;
+    max-width: var(--max-page-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--padding-lg);
+  }
+  @media (max-width: #{$mobile-breakpoint}) {
+    .cards {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      padding: var(--padding-lg) 0;
+    }
+    h2 {
+      padding: 0 var(--padding-lg);
+    }
+  }
+</style>

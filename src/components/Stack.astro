@@ -1,0 +1,17 @@
+---
+type Props = { direction?: "row" | "column"; gap?: "sm" | "md" | "lg" };
+
+const { direction, gap } = Astro.props;
+---
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: direction ?? "column",
+    alignItems: "stretch",
+    // justifyContent: "flex-start",
+    gap: gap ? `var(--space-${gap})` : undefined,
+  }}
+>
+  <slot />
+</div>

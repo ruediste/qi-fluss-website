@@ -1,0 +1,169 @@
+@use "reset.scss";
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+:root {
+  --max-page-width: #{$max-page-width};
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+
+  --padding-sm: 8px;
+  --padding-md: 16px;
+  --padding-lg: 32px;
+
+  --line-height: 28.8px;
+
+  --text-font-size: 14px;
+}
+
+/* ------------------------------------------------------------------
+Page Elements
+------------------------------------------------------------------ */
+
+body {
+  font-family: var(--font-montserrat);
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+
+  &:not(:first-child) {
+    margin-top: var(--space-md);
+  }
+}
+
+p,
+ul,
+ol,
+dl {
+  line-height: var(--line-height);
+  font-size: var(--text-font-size);
+}
+
+
+b {
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+p+p {
+  margin-top: 12px;
+}
+
+p+a.button {
+  margin-top: var(--space-md);
+}
+
+
+// list header
+.p-list-header {
+  font-size: var(--text-font-size);
+  font-weight: 700;
+
+  &:not(:first-child) {
+    margin-top: var(--space-md);
+  }
+}
+
+ul,
+ol {
+  margin-top: 12px;
+}
+
+ul {
+  padding-left: 20px;
+
+  >li {
+    padding-left: 4px;
+    list-style-image: url(../assets/list-marker.svg);
+  }
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 1.5em;
+}
+
+// section
+
+.section-text {
+  padding: 32px;
+  line-height: 2;
+}
+
+a.button {
+  background-color: #293f7d;
+  border: none;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 8px;
+  cursor: pointer;
+  max-width: 14rem;
+
+  &.-blue {
+    background-color: #0c1047;
+  }
+}
+
+a.button:hover {
+  background-color: #4caf50;
+  /* Green */
+  color: white;
+}
+
+/* ------------------------------------------------------------------
+   Responsive breakpoint visibility utilities
+   Breakpoint: 48rem (768px)
+   Usage: <div class="hidden-mobile">…</div>  -> visible only on desktop
+          <div class="hidden-desktop">…</div> -> visible only on mobile
+   ------------------------------------------------------------------ */
+@media (max-width: #{$mobile-breakpoint}) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: #{$mobile-breakpoint + 0.001rem}) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}

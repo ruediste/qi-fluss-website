@@ -1,0 +1,93 @@
+---
+import portrait from "../../assets/portraitNinaWide.jpeg";
+import CallToActionLink from "../../components/CallToActionLink.astro";
+import Section from "../../components/Section.astro";
+import Page from "../../layouts/Page.astro";
+import energie from "./buddha-qifluss-praxis1.jpeg";
+---
+
+<Page
+  title="Qi Fluss Praxis Rüti"
+  description="Ganzheitliche APM Therapie in Rüti"
+  keywords={[
+    "QiFluss Praxis Rüti",
+    "Nina Steinmann",
+    "APM Therapie",
+    "Schmerztherapie Rüti",
+    "Ganzheitliche Medizin",
+    "Rüti ZH",
+    "Therapie Rüti",
+  ]}
+  image={portrait}
+>
+  <Section>
+    <div slot="left">
+      <h1>Nina Steinmann <br>Therapie Rüti ZH</h1>
+    </div>
+    <div slot="right"></div>
+  </Section>
+  <Section>
+    <div slot="left"></div>
+    <div slot="right" style="flex-grow: 2;">
+      <h2>Von der Informatik zur ganzheitlichen Energiearbeit</h2>
+      <p>
+        Mein Weg zur Körpertherapie führte über einen spannenden
+        Richtungswechsel: Nach meinem Studium der Wirtschaftsinformatik war ich
+        jahrelang in der Softwareentwicklung, Projektleitung und als Dozentin
+        tätig. Analyse, vernetztes Denken und das Verstehen komplexer Systeme
+        gehörten zu meinem Alltag.
+      </p>
+
+      <p>
+        Parallel dazu begleitete mich schon immer eine tiefe Faszination für die
+        fernöstliche Kultur und ganzheitliche Medizin. Als ich durch ein eigenes
+        chronisches Schmerzproblem verschiedene Therapien ausprobierte, stiess
+        ich auf die <strong>APM Therapie nach Radloff</strong>. Die nachhaltige
+        Wirkungsweise dieser Methode begeisterte mich, so dass ich diese sanfte
+        Therapiemethode selber erlernen wollte.
+      </p>
+
+      <p>
+        Heute verbinde ich meine strukturierte, analytische Herangehensweise mit
+        einfühlsamer, manueller Energiearbeit. Es erfüllt mich jeden Tag, meine
+        Klientinnen und Klienten in der <strong
+          >QiFluss Praxis in Rüti ZH</strong
+        > auf ihrem Weg zu mehr Schmerzfreiheit, Wohlbefinden und innerer Balance
+        zu begleiten.
+      </p>
+    </div>
+  </Section>
+  <Section color="normal">
+    <div slot="left">
+      <h2>Meine Philosophie in der QiFluss Praxis</h2>
+      <p>
+        „Gesundheit entsteht, wenn die Lebensenergie ungehindert fliessen kann. Ich
+        betrachte nicht nur das einzelne Symptom, sondern den Menschen in seiner Gesamtheit
+        – sanft, individuell und zielgerichtet.“
+      </p>
+    </div>
+  </Section>
+  <Section >
+    <div slot="left">
+      <h2>Ausbildungen</h2>
+      <ul>
+        <li><b>2026</b> APM Therapie Abschluss Level 1 Lehrinstitut Radloff</li>
+        <li><b>2025</b> Fussreflexzonen Therapeutin Bodyfeet</li>
+        <li><b>2021</b> Dorn-Therapie Grundausbildung Bodyfeet</li>
+        <li><b>2011</b> SVEB 1 Erwachsenenbildung</li>
+        <li><b>2005</b> dipl. Wirtschaftsinformatikerin Universität Zürich</li>
+      </ul>
+      <h2>Krankenkassenanerkennung</h2>
+      <ul>
+        <li>EMR Registrierung EMR-Nummer 49359</li>
+        <li>Mitglied im Berufsverband APM Schweiz</li>
+      </ul>
+    </div>
+    <div slot="right">
+      <img src={energie.src} alt="Ausbildung Nina Steinmann" />
+      <CallToActionLink href={"booking-qifluss-praxis-rueti"}
+        >{"Termin buchen"}</CallToActionLink
+      >
+    </div>
+  </Section>
+</Page>

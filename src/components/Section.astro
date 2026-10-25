@@ -1,0 +1,62 @@
+---
+type Props = { color?: "normal" | "light" | "invisible" | "blue" | "green" };
+
+const { color } = Astro.props;
+const colors = {
+  normal: "#f1f1f1",
+  light: "#75b7ef",
+  blue: "#293f7d",
+  green: "#5ab975",
+  invisible: "transparent",
+} satisfies Record<Exclude<typeof color, undefined>, string>;
+---
+
+<div
+  class="section-wrapper"
+  style={{
+    backgroundColor: colors[color ?? "invisible"],
+  }}
+>
+  <div>
+    <slot name="left" />
+    <slot name="right" />
+  </div>
+</div>
+<style lang="scss">
+  .section-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    > div {
+      flex-basis: 0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      gap: var(--space-lg);
+      padding: var(--padding-lg);
+      max-width: var(--max-page-width);
+      box-sizing: border-box;
+      & > :global(*) {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+      & > :global(div) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        > :global(img) {
+          width: 100%;
+          // height: 100%;
+          object-fit: contain;
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: #{$mobile-breakpoint}) {
+    .section-wrapper > div {
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+type Props = { href: string };
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : import.meta.env.BASE_URL + "/";
+const { href } = Astro.props;
+---
+
+<a href={base + href} class="callToActionLink">
+  <slot />
+  <svg
+    class="callToActionLink__icon"
+    viewBox="0 0 28 28"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <circle cx="14" cy="14" r="13"></circle>
+    <path d="M9 14h9m-4-4 4 4-4 4"></path>
+  </svg>
+</a>
+
+<style lang="scss">
+
+.callToActionLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  padding: 0 50px 0 40px;
+  text-decoration: none;
+  color: #fff !important;
+  background-color: #0c1047;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background-color 160ms ease;
+
+  &__icon {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: #4caf50;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #171b1f;
+    outline-offset: 3px;
+  }
+}
+
+</style>

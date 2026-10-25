@@ -1,0 +1,39 @@
+---
+import PageBase from "./PageBase.astro";
+
+type Props = {
+  title: string;
+  description: string;
+  image: ImageMetadata;
+  keywords: string[];
+};
+
+const { title, description, image, keywords } = Astro.props;
+---
+
+<PageBase
+  title={title}
+  description={description}
+  keywords={keywords}
+  mainStyle={{}}
+>
+  <img id="page-main-image" src={image.src} alt="" />
+  <slot />
+</PageBase>
+
+<style>
+  #page-main-image {
+    display: block;
+    width: 100%;
+  }
+
+  /* On narrow screens, crop the image to its horizontal center
+     instead of shrinking the whole wide image. */
+  @media (max-width: 48rem) {
+    #page-main-image {
+      height: 16rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+</style>

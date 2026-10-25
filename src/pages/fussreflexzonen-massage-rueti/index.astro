@@ -1,0 +1,142 @@
+---
+import fussreflex2 from "../../assets/fussreflexzonen-massage.jpeg";
+import teeezeremonie from "../../assets/Teezeremonie.jpg";
+import Section from "../../components/Section.astro";
+import Page from "../../layouts/Page.astro";
+import fusssreflex from "./fussmassage.jpg";
+---
+
+<Page
+  title="Qi Fluss Praxis Rüti"
+  description="Ganzheitliche APM Therapie in Rüti"
+  keywords={[
+    "Fussreflexzonenmassage Rüti",
+    "QiFluss Praxis Rüti",
+    "Reflexzonenmassage Zürich",
+    "Stressabbau Rüti",
+    "Entspannung",
+    "Naturheilkunde",
+    "Ganzheitliche Therapie",
+  ]}
+  image={fusssreflex}
+>
+  <Section>
+    <div slot="left">
+      <h1>Fussreflexzonenmassage <br>in Rüti ZH</h1>
+    </div>
+    <div slot="right"></div>
+  </Section>
+  <Section>
+    <div slot="left"></div>
+    <div slot="right">
+      <h2>Ganzheitliche Entspannung von Kopf bis Fuss</h2>
+      <p>
+        Unsere Füsse tragen uns täglich durchs Leben – und spiegeln gleichzeitig
+        unseren gesamten Organismus wider. Ob als wohltuende Auszeit vom Alltag
+        oder zur gezielten Unterstützung bei körperlichen Beschwerden – in der <strong
+          >Qi-Fluss-Praxis in Rüti</strong
+        > begleite ich Sie auf Ihrem Weg zu mehr Wohlbefinden und innerer Balance
+        im Zürcher Oberland.
+      </p>
+    </div>
+  </Section>
+  <h1></h1>
+  <Section color="normal">
+    <div slot="left">
+      <h2>Wie funktioniert die Fussreflexzonenmassage?</h2>
+      <p>
+        In der ganzheitlichen Reflexzonentherapie geht man davon aus, dass alle
+        Organe, Muskeln und Körpersysteme über Nerven- und Energiebahnen mit
+        spezifischen Punkten an den Füssen verbunden sind. Durch gezielte Impuls-
+        und Drucktechniken werden diese Reflexzonen stimuliert. Dies regt die
+        Durchblutung an, löst Energieblockaden und unterstützt den Körper dabei,
+        wieder in sein natürliches Gleichgewicht zu finden.
+      </p>
+      <ol>
+        <li>
+          <strong>Zehenbereich</strong>: Steht in Verbindung mit Kopf, Nacken
+          und Sinnesorganen.
+        </li>
+        <li>
+          <strong>Fussinnenballen</strong>: Spiegelt die Wirbelsäule und den
+          Bewegungsapparat wider.
+        </li>
+        <li>
+          <strong>Mittelfuss</strong>: Entspricht den inneren Organen wie Magen,
+          Leber und Nieren.
+        </li>
+        <li>
+          <strong>Ferse & Knöchel</strong>: Steht stellvertretend für das
+          Becken, den Unterleib und die Beine.
+        </li>
+      </ol>
+    </div>
+    <div slot="right">
+      <img src={fussreflex2.src} alt="Sitting Buddha" />
+    </div>
+  </Section>
+  <Section>
+    <!-- <div><img src={philosophie.src} alt="Sitting Buddha" /></div> -->
+    <div slot="left">
+      <h2>Positive Wirkungen der Behandlung</h2>
+      <ol type="1">
+        <li>
+          <b>Tiefenentspannung & Stressabbau</b>: Beruhigt das Nervensystem und
+          baut Alltagsstress nachhaltig ab.
+        </li>
+        <li>
+          <b>Anregung von Stoffwechsel & Lymphfluss</b>: Fördert die Entgiftung
+          und den Abtransport von Abbauprodukten.
+        </li>
+        <li>
+          <b>Linderung von Schmerzen & Verspannungen</b>: Kann bei Rücken-,
+          Nacken- und Kopfschmerzen entlastend wirken.
+        </li>
+        <li>
+          <b>Verdauung & Immunsystem</b>: Harmonisiert Magen-Darm-Funktionen und
+          stärkt die Abwehrkräfte.
+        </li>
+        <li>
+          <b>Förderung des Energieflusses (Qi)</b>: Harmonisiert
+          Magen-Darm-Funktionen und stärkt die Abwehrkräfte.
+        </li>
+      </ol>
+    </div>
+  </Section>
+  <Section color="normal">
+    <div slot="left"><img src={teeezeremonie.src} alt="Sitting Buddha" /></div>
+    <div slot="right">
+      <h2>Wie läuft eine Fussreflexzonenmassage in der Qi-Fluss-Praxis ab?</h2>
+      <h3>Persönliches Erstgespräch</h3>
+      <p>
+        Wir besprechen Ihre aktuellen Bedürfnisse, Wünsche sowie allfällige
+        gesundheitliche Besonderheiten.
+      </p>
+      <h3>Individuelle Reflexzonenbehandlung</h3>
+      <p>
+        Mit abgestimmten Drucktechniken behandeln wir gezielt die relevanten
+        Zonen an Ihren Füssen.
+      </p>
+      <h3>Ruhephase & Nachspüren</h3>
+      <p>
+        Kurze Nachruhe, damit Ihr Körper die gesetzten Impulse optimal
+        verarbeiten und integrieren kann.
+      </p>
+    </div>
+  </Section>
+  <Section >
+    <div slot="left"></div>
+    <div slot="right">
+      <h2>Bereit für Ihre ganzheitliche Auszeit?</h2>
+      <p>
+        Gönnen Sie Ihren Füssen und Ihrem Körper die Aufmerksamkeit, die sie verdienen.
+        Bringen Sie Ihre Energie wieder ins Fliessen.
+      </p>
+      <a
+        class="button -blue"
+        href={`${import.meta.env.BASE_URL}/apm-therapie-rueti/`}
+        >Termin vereinbaren</a
+      >
+    </div>
+  </Section>
+</Page>

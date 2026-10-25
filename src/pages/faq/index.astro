@@ -1,0 +1,37 @@
+---
+import title from "../../assets/qifluss-praxis-schmerztherapie-rueti.jpeg";
+import Faq from "../../components/Faq.astro";
+import FaqSection from "../../components/FaqSection.astro";
+import Page from "../../layouts/Page.astro";
+---
+
+<Page
+  title="APM-Therapie & Schmerztherapie Rüti ZH | QiFluss Praxis"
+  description="Ganzheitliche Schmerztherapie, APM-Therapie nach Radloff & Fussreflexzonenmassage in Rüti ZH. Blockaden lösen & Beschwerden lindern. Jetzt Termin buchen!"
+  keywords={[
+    "FAQ APM Therapie",
+    "Fragen Schmerztherapie Rüti",
+    "QiFluss Praxis Rüti",
+    "APM Therapie Fragen",
+    "Fussreflexzonenmassage FAQ",
+    "Krankenkasse APM Therapie",
+  ]}
+  image={title}
+>
+  <div style="display:flex; flex-direction: row; justify-content: center;">
+    <div style="max-width: var(--max-page-width); flex: 1;">
+      <h1>Häufig gestellte Fragen</h1>
+    </div>
+  </div>
+
+  <FaqSection>
+    <Faq title="Frage A">
+      <p>Antwort auf Frage A.</p>
+      <p>Weitere Details zur Antwort auf Frage A.</p>
+    </Faq>
+    <Faq title="Frage B">
+      <p>Antwort auf Frage B.</p>
+      <p>Weitere Details zur Antwort auf Frage B.</p>
+    </Faq>
+  </FaqSection>
+</Page>

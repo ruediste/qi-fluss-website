@@ -1,0 +1,58 @@
+---
+type Props = { title: string };
+
+const { title } = Astro.props;
+---
+
+<details class="faq">
+  <summary class="faq-title">{title}</summary>
+  <div class="faq-answer">
+    <slot />
+  </div>
+</details>
+
+<style lang="scss">
+  .faq {
+    min-width: 0;
+    border-bottom: 1px solid #9cbbb2;
+    color: #243c35;
+    overflow-wrap: anywhere;
+  }
+
+  .faq-title {
+    padding: var(--space-md);
+    font-weight: 600;
+    line-height: var(--line-height);
+    cursor: pointer;
+
+    &::marker {
+      color: #293f7d;
+    }
+
+    &:hover {
+      background-color: rgb(41 63 125 / 6%);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #293f7d;
+      outline-offset: -2px;
+    }
+  }
+
+  .faq[open] > .faq-title {
+    background-color: rgb(41 63 125 / 6%);
+  }
+
+  .faq-answer {
+    padding: var(--space-md);
+    line-height: var(--line-height);
+
+    > :global(:first-child) {
+      margin-top: 0;
+    }
+
+    > :global(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+</style>

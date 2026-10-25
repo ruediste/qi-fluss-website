@@ -1,0 +1,471 @@
+---
+import { Image } from "astro:assets";
+import HeaderLink from "./HeaderLink.astro";
+import logo from "../assets/260903_RZ_Logo_QiFluss Praxis_Montserrat_rechts.png";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : import.meta.env.BASE_URL + "/";
+type NavigationLink = {
+  href?: string;
+  label: string;
+  children?: NavigationLink[];
+};
+
+const links: NavigationLink[] = [
+  { href: base, label: "Home" },
+  {
+    label: "Therapieangebot",
+    children: [
+      {
+        href: `${base}apm-therapie-radloff-rueti/`,
+        label: "APM Therapie Radloff",
+      },
+      {
+        href: `${base}fussreflexzonen-massage-rueti/`,
+        label: "Fussreflexzonen Massage",
+      },
+    ],
+  },
+  {
+    label: "Häufigsten Beschwerden",
+    children: [
+      {
+        href: `${base}arthrose-apm-therapie-radloff-rueti/`,
+        label: "Arthrose",
+      },
+      {
+        href: `${base}chronische-schmerzen-apm-therapie-radloff-rueti/`,
+        label: "Chronische Schmerzen",
+      },
+      {
+        href: `${base}kopfschmerzen-migraene-apm-therapie-radloff-rueti/`,
+        label: "Kopfschmerzen & Migräne",
+      },
+      {
+        href: `${base}gynaekologische-beschwerden-apm-therapie-radloff-rueti/`,
+        label: "Gynäkologische Beschwerden",
+      },
+      {
+        href: `${base}orthopaedische-beschwerden-apm-therapie-radloff-rueti/`,
+        label: "Orthopädische Beschwerden",
+      },
+      {
+        href: `${base}rueckenschmerzen-apm-therapie-radloff-rueti/`,
+        label: "Rückenschmerzen",
+      },
+      {
+        href: `${base}schleudertrauma-apm-therapie-radloff-rueti/`,
+        label: "Schleudertrauma",
+      },
+      {
+        href: `${base}erschoepfung-stress-apm-therapie-radloff-rueti/`,
+        label: "Stress & Erschöpfung",
+      },
+      {
+        href: `${base}verdauungsbeschwerden-apm-therapie-radloff-rueti/`,
+        label: "Verdauungsbeschwerden",
+      },
+    ],
+  },
+  { href: `${base}booking-qifluss-praxis-rueti/`, label: "Buchung" },
+  {
+    label: "Praxis",
+    children: [
+      {
+        href: `${base}about-qifluss-praxis-rueti/`,
+        label: "Über Mich",
+      },
+      { href: `${base}angebot-preise-qifluss-praxis-rueti/`, label: "Preise" },
+    ],
+  },
+];
+---
+
+<header
+  style="background: #fff; border-bottom: 1px solid rgba(96, 115, 159, 0.2);"
+>
+  <div
+    style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 72rem; margin: 0 auto; padding: 0.75rem 1rem;"
+  >
+    <a
+      href={base}
+      aria-label="QiFluss Praxis – Startseite"
+      style="display: inline-flex; align-items: center; text-decoration: none;"
+    >
+      <Image
+        src={logo}
+        alt="QiFluss Praxis Logo"
+        height={60}
+        densities={[1, 2]}
+        style=" width: auto; display: block;"
+      />
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav
+      id="header-desktop-nav"
+      aria-label="Hauptnavigation"
+      style="display: block;"
+    >
+      <div class="desktop-links">
+        {
+          links.map((link) => (
+            <div
+              class:list={[
+                "desktop-item",
+                { "has-children": link.children?.length },
+              ]}
+            >
+              {link.href ? (
+                <HeaderLink href={link.href}>{link.label}</HeaderLink>
+              ) : (
+                <details class="desktop-disclosure" name="desktop-navigation">
+                  <summary>{link.label}</summary>
+                  {link.children?.length && (
+                    <div class="desktop-submenu">
+                      {link.children.map((child) => (
+                        <HeaderLink href={child.href}>{child.label}</HeaderLink>
+                      ))}
+                    </div>
+                  )}
+                </details>
+              )}
+              {link.children?.length && link.href && (
+                <div class="desktop-submenu">
+                  {link.children.map((child) => (
+                    <HeaderLink href={child.href}>{child.label}</HeaderLink>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </nav>
+
+    <!-- Mobile hamburger button -->
+    <div
+      id="header-menu-toggle"
+      aria-expanded="false"
+      aria-controls="header-mobile-nav"
+      aria-label="Menü öffnen"
+      style="cursor: pointer; "
+    >
+      <svg
+        id="header-menu-icon-closed"
+        aria-hidden="true"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        style="display: block; margin: auto;"
+      >
+        <path d="M4 6h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 18h16"></path>
+      </svg>
+      <svg
+        id="header-menu-icon-open"
+        aria-hidden="true"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        style="display: none; margin: auto;"
+      >
+        <path d="M6 6l12 12"></path>
+        <path d="M18 6L6 18"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Mobile navigation: full width, expands/collapses in document flow -->
+  <nav
+    id="header-mobile-nav"
+    aria-label="Hauptnavigation"
+    style="display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease; overflow: hidden;"
+  >
+    <div
+      style={{
+        minHeight: "0",
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "stretch",
+        gap: "0",
+        listStyle: "none",
+        margin: "0",
+        padding: "0 1rem",
+        transition: "padding 0.3s ease",
+      }}
+    >
+      {
+        links.map((link, index) => (
+          <div class="mobile-item">
+            <div class="mobile-link-row">
+              {link.href ? (
+                <HeaderLink
+                  href={link.href}
+                  style="display: block; padding: 0.875rem 0;"
+                >
+                  {link.label}
+                </HeaderLink>
+              ) : link.children?.length ? (
+                <button
+                  class="submenu-toggle mobile-group-toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls={`header-mobile-submenu-${index}`}
+                  aria-label={`Untermenü ${link.label} öffnen`}
+                  data-label={link.label}
+                >
+                  <span>{link.label}</span>
+                  <svg
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m3 6 5 5 5-5" />
+                  </svg>
+                </button>
+              ) : (
+                <span class="mobile-group-label">{link.label}</span>
+              )}
+              {link.href && link.children?.length && (
+                <button
+                  class="submenu-toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls={`header-mobile-submenu-${index}`}
+                  aria-label={`Untermenü ${link.label} öffnen`}
+                >
+                  <svg
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m3 6 5 5 5-5" />
+                  </svg>
+                </button>
+              )}
+            </div>
+            {link.children?.length && (
+              <div class="mobile-submenu" id={`header-mobile-submenu-${index}`}>
+                {link.children.map((child) => (
+                  <HeaderLink
+                    href={child.href}
+                    style="display: block; padding: 0.75rem 0;"
+                  >
+                    {child.label}
+                  </HeaderLink>
+                ))}
+              </div>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </nav>
+</header>
+
+<style>
+  .desktop-links {
+    display: flex;
+    gap: 1rem;
+  }
+  .desktop-item {
+    position: relative;
+  }
+  .desktop-disclosure summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  .desktop-disclosure summary::-webkit-details-marker {
+    display: none;
+  }
+  .desktop-disclosure[open] .desktop-submenu {
+    display: block;
+  }
+  .desktop-submenu {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 12rem;
+    max-width: calc(100vw - 2rem);
+    box-sizing: border-box;
+    padding: 0.5rem 0;
+    background: #fff;
+    border: 1px solid rgba(96, 115, 159, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  .desktop-item:last-child .desktop-submenu {
+    right: 0;
+    left: auto;
+  }
+  .desktop-submenu a {
+    display: block;
+    padding: 0.625rem 1rem;
+  }
+  .has-children:hover .desktop-submenu,
+  .has-children:focus-within .desktop-submenu {
+    display: block;
+  }
+  .mobile-item {
+    border-top: 1px solid rgba(96, 115, 159, 0.2);
+  }
+  .mobile-link-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile-link-row > a {
+    flex: 1;
+  }
+  .mobile-group-label {
+    flex: 1;
+    padding: 0.875rem 0;
+  }
+  .submenu-toggle.mobile-group-toggle {
+    width: 100%;
+    height: auto;
+    padding: 0.875rem 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font: inherit;
+  }
+  .submenu-toggle {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+  .submenu-toggle[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+  .submenu-toggle svg {
+    transition: transform 0.2s ease;
+  }
+  .mobile-submenu {
+    display: none;
+    padding-left: 1rem;
+  }
+  .mobile-submenu.is-open {
+    display: block;
+  }
+  @media (min-width: 55rem) {
+    #header-mobile-nav {
+      display: none !important;
+    }
+    #header-menu-toggle {
+      display: none !important;
+    }
+  }
+  @media (max-width: 55rem) {
+    #header-desktop-nav {
+      display: none !important;
+    }
+  }
+</style>
+<script>
+  const toggle = document.getElementById(
+    "header-menu-toggle",
+  ) as HTMLButtonElement | null;
+  const iconClosed = document.getElementById(
+    "header-menu-icon-closed",
+  ) as HTMLElement | null;
+  const iconOpen = document.getElementById(
+    "header-menu-icon-open",
+  ) as HTMLElement | null;
+  const nav = document.getElementById(
+    "header-mobile-nav",
+  ) as HTMLElement | null;
+
+  if (toggle && iconClosed && iconOpen && nav) {
+    let open = false;
+
+    const setOpen = (next: boolean) => {
+      open = next;
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute(
+        "aria-label",
+        open ? "Menü schließen" : "Menü öffnen",
+      );
+      if (open) {
+        iconClosed.style.display = "none";
+        iconOpen.style.display = "block";
+      } else {
+        iconClosed.style.display = "block";
+        iconOpen.style.display = "none";
+      }
+
+      // Expand/collapse animation via grid-template-rows 0fr -> 1fr
+      nav.style.gridTemplateRows = open ? "1fr" : "0fr";
+    };
+
+    toggle.addEventListener("click", () => setOpen(!open));
+
+    nav
+      .querySelectorAll<HTMLButtonElement>(".submenu-toggle")
+      .forEach((button) => {
+        button.addEventListener("click", () => {
+          const expanded = button.getAttribute("aria-expanded") === "true";
+          if (!expanded) {
+            nav
+              .querySelectorAll<HTMLButtonElement>(
+                '.submenu-toggle[aria-expanded="true"]',
+              )
+              .forEach((openButton) => {
+                openButton.setAttribute("aria-expanded", "false");
+                openButton.setAttribute(
+                  "aria-label",
+                  `Untermenü ${openButton.dataset.label ? `${openButton.dataset.label} ` : ""}öffnen`,
+                );
+                document
+                  .getElementById(
+                    openButton.getAttribute("aria-controls") ?? "",
+                  )
+                  ?.classList.remove("is-open");
+              });
+          }
+          const submenu = document.getElementById(
+            button.getAttribute("aria-controls") ?? "",
+          );
+          button.setAttribute("aria-expanded", String(!expanded));
+          button.setAttribute(
+            "aria-label",
+            `Untermenü ${button.dataset.label ? `${button.dataset.label} ` : ""}${expanded ? "öffnen" : "schließen"}`,
+          );
+          submenu?.classList.toggle("is-open", !expanded);
+        });
+      });
+
+    // Close the menu when a link is clicked
+    nav.addEventListener("click", (event) => {
+      if ((event.target as HTMLElement).closest("a")) {
+        setOpen(false);
+      }
+    });
+  }
+</script>

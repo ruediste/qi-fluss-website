@@ -1,0 +1,307 @@
+---
+import apm from "../../assets/apm-therapie-radloff.jpg";
+import Faq from "../../components/Faq.astro";
+import FaqSection from "../../components/FaqSection.astro";
+import Card from "../../components/Card.astro";
+import Cards from "../../components/Cards.astro";
+import Section from "../../components/Section.astro";
+import Page from "../../layouts/Page.astro";
+import apmanamnese from "./apm-therapie-radloff-anamnese-qifluss-praxis-rueti.jpeg";
+import apmenergetik from "./apm-therapie-radloff-energetik-qifluss-praxis-rueti.jpeg";
+import apmohrbefund from "./apm-therapie-radloff-ohrbefund-qifluss-praxis-rueti.jpeg";
+import apmstatik from "./apm-therapie-radloff-mobilisation-qifluss-praxis-rueti.jpeg";
+import apmtherapie from "./apm-therapie-radloff-wide.jpg";
+import medizin from "./chinesische-medizin.jpg";
+import philosophie from "./qifluss-praxis-philosophie-2.jpg";
+---
+
+<Page
+  title="Qi Fluss Praxis Rüti"
+  description="Ganzheitliche APM Therapie in Rüti"
+  keywords={[
+    "APM Therapie",
+    "QiFluss Praxis Rüti",
+    "Akupunktur Massage nach Radloff",
+    "Schmerztherapie",
+    "TCM",
+    "Traditionelle Chinesische Medizin",
+  ]}
+  image={apmtherapie}
+>
+  <Section>
+    <div slot="left">
+      <h1>
+        Ganzheitliche APM Therapie
+        <br />in Rüti ZH
+      </h1>
+    </div>
+    <div slot="right"></div>
+  </Section>
+  <Section>
+    <div slot="left"></div>
+    <div slot="right">
+      <h2>Energie im Fluss. Leben in Bewegung.</h2>
+      <p>
+        Fühlen Sie sich erschöpft, leiden Sie unter chronischen Schmerzen oder
+        blockierten Gelenken? Die APM Therapie ist eine ganzheitliche, sanfte
+        Therapieform, die das körpereigene Energiesystem wieder ins
+        Gleichgewicht bringt – <strong>ganz ohne Nadeln.</strong>
+      </p>
+      <a
+        class="button -blue"
+        href={`${import.meta.env.BASE_URL}/booking-qifluss-praxis-rueti/`}
+        >Termin vereinbaren</a
+      >
+    </div>
+  </Section>
+  <h1></h1>
+  <Section color="normal">
+    <div slot="left">
+      <h2>Was ist APM Therapie nach Radloff?</h2>
+      <p>
+        Die APM Therapie (Akupunktur Massage nach Radloff) vereint die
+        Prinzipien der Traditionellen Chinesischen Medizin (TCM) mit Techniken
+        der Osteopathie und Physiotherapie. Nach der fernöstlichen Philosophie
+        fliesst unsere Lebensenergie - das Qi - in einem Netzwerk durch den
+        gesamten Körper. Ist dieser Fluss blockiert oder ungleichmässig
+        verteilt, entstehen Schmerzen, Verspannungen und Funktionsstörungen.
+      </p>
+      <p>
+        In der <strong>QiFluss Praxis in Rüti</strong> streiche ich mit einem speziellen
+        Metallstäbchen sanft die Meridiane nach. Energieblockaden im Körper werden
+        gelöst und die Selbstheilungskräfte aktiviert.
+      </p>
+    </div>
+    <div slot="right">
+      <img
+        src={apm.src}
+        alt="Ganzheitliche Schmerztherapie APM Therapie QiFluss Praxis Rüti"
+      />
+    </div>
+  </Section>
+  <Section>
+    <!--  <div><img src={philosophie.src} alt="Sitting Buddha" /></div> -->
+    <div slot="left">
+      <h2>
+        Wie unterscheidet sich APM Therapie von der klassischen Akupunktur?
+      </h2>
+      <p>
+        Viele Menschen assoziieren die Arbeit mit Meridianen sofort mit der
+        klassischen Akupunktur. Doch die APM Therapie nach Radloff unterscheidet
+        sich in wesentlichen Punkten:
+      </p>
+      <ol type="1">
+        <li>
+          <b>Behandlung ohne Nadeln</b>: Die Meridiane werden sanft mit einem
+          Metallstäbchen oder von Hand gestrichen. Das ist schmerzfrei und fühlt
+          sich angenehm auf der Haut an.
+        </li>
+        <li>
+          <b>Ganzheitliche Meridianbehandlung</b>: Bei der Akupunktur werden
+          einzelne Punkte gestochen. Die APM Therapie harmonisiert das gesamte
+          Meridiannetzwerk und behandelt den ganzen Verlauf des Meridans.
+        </li>
+        <li>
+          <b>Präzise Ohr-Reflexzonen-Diagnostik</b>: Anstatt nach festen
+          Schemata zu behandeln, lässt sich über die Reizung von Ohrpunkten
+          feststellen, welche Meridiane und Gelenke aktuell blockiert sind.
+        </li>
+        <li>
+          <b>Statikbehandlung</b>: Radloff integriert die sanfte Mobilisation
+          aller Gelenke (Becken, Wirbelsäule, Arme und Beine). Fehlstellungen
+          werden nicht durch "Einrenken", sondern durch sanfte Impulse im
+          energetischen Gleichgewicht korrigiert.
+        </li>
+      </ol>
+    </div>
+  </Section>
+  <Section color="normal">
+    <div slot="left">
+      <img src={medizin.src} alt="Anwendungsgebiete APM Therapie Radloff" />
+    </div>
+    <div slot="right">
+      <h2>Anwendungsgebiete: Wann hilft APM-Therapie?</h2>
+      <ul>
+        <li>
+          <b>Rückenschmerzen & Ischias</b> : Linderung von akuten Hexenschüssen, chronischen
+          Lendenwirbelsäulen-Beschwerden, Ischiasreizungen und Beckenschiefständen.
+        </li>
+        <li>
+          <b>Sportverletzungen, Unfälle</b>: Schleudertrauma oder zur
+          Rehabilitation nach operativen Eingriffen
+        </li>
+        <li>
+          <b>Gelenkbeschwerden</b>: Behandlung von
+          Funktionsstörungen und Schmerzen an Knie, Schulter, Hüfte, Ellenbogen
+          oder Sprunggelenken. Nach Sportverletzungen
+        </li>
+        <li>
+          <b>Kopfschmerzen & Migräne</b>: Entlastung bei Spannungskopfschmerzen,
+          Migräneanfällen, Schwindel oder Nackenverspannungen.
+        </li>
+        <li>
+          <b>Narbenprobleme & Narbenentstörung</b>: Operative Narben (z. B. nach
+          einem Kaiserschnitt, Blinddarm- oder Gelenkeingriff) durchtrennen oft
+          die Meridiane. Eine gezielte Narbenentstörung stellt den
+          unterbrochenen Energiefluss wieder her und löst verklebtes Gewebe.
+        </li>
+        <li>
+          <b>Schlafstörungen, Erschöpfung & Stress</b>: Tiefenentspannung bei
+          chronischer Müdigkeit, innerer Unruhe, Burnout-Symptomen und
+          vegetativen Beschwerden.
+        </li>
+        <li>
+          <b>Chronische Schmerzzustände</b>: Entlastung des Körpers, Reduzierung
+          der Schmerzen bei Arthrose
+        </li>
+        <li><b>Verdauungsbeschwerden</b>: Reizdarm, Durchfall, Verstopfung</li>
+        <li><b>Gynäkologische Beschwerden</b>: Menstruationsbeschwerden, während der Schwangerschaft, nach der Geburt</li>
+        <li><b>Allergien</b>: Heuschnupfen</li>
+      </ul>
+    </div>
+  </Section>
+  <Cards heading="Wie läuft eine APM-Behandlung in der Qi-Fluss-Praxis ab?">
+    <Card number={1} image={apmanamnese}>
+      <h3>Anamnesegespräch</h3>
+      <p>
+        Jede Behandlung in meiner Praxis in Rüti wird individuell auf Ihren
+        aktuellen energetischen Zustand abgestimmt: Bei einer Erstbehandlung
+        oder nach einer längeren Behandlungspause erfolgt vor der Behandlung ein
+        15 Min Gespräch über die Vorgeschichte und die aktuellen Beschwerden.
+      </p>
+    </Card>
+    <Card number={2} image={apmohrbefund}>
+      <h3>Befunderhebung am Ohr</h3>
+      <p>
+        Am Ohr wird mit einem Metallstäbchen der Energiezustand des Körpers
+        ermittelt. Das Ohr wird mit einem Metallstäbchen abgetastet und die
+        passende Behandlungsstrategie festgelegt. Das Ohr wird später für die
+        Behandlung der Wirbelsäule und für mögliche Narbenbehandlungen zu Rate
+        gezogen.
+      </p>
+    </Card>
+    <Card number={3} image={apmenergetik}>
+      <h3>Energetische Behandlung der Meridiane</h3>
+      <p>
+        Mit dem APM-Metallstäbchen oder den Fingern werden einzelne Meridiane
+        oder Abschnitte am Körper behandelt. Die Reizsetzung ist sanft und
+        schmerzlos. Das Ziel der Meridianbehandlung besteht darin, den
+        Energiefluss im Körper anzuregen und damit die Lebensenergie Qi wieder
+        frei fliessen kann.
+      </p>
+    </Card>
+    <Card number={4} image={apmstatik}>
+      <h3>Statische Wirbelsäulenbehandlung und Gelenkbehandlungen</h3>
+      <p>
+        Die Wirbelsäule und da Becken werden mit Dehn- und Mobilisationsgriffen
+        gelockert. Auf der Wirbelsäule liegen wichtige Akupunkturpunkte, weshalb
+        eine Blockade an diesen Punkten immer einen Einfluss auf die
+        Flussbedingungen hat.  Am Anfang einer Behandlungsserie werden
+        zusätzlich alle Arm- und Beingelenke mobilisiert.
+      </p>
+    </Card>
+  </Cards>
+  <Section color="normal">
+    <!--     <div slot="left" style="flex-grow: 0.5;">
+      <img src={philosophie.src} alt="Sitting Buddha" />
+    </div> -->
+    <div slot="right">
+      <h2>Häufig gestellte Fragen</h2>
+      <FaqSection>
+        <Faq title="Ist eine APM Therapie Behandlung schmerzhaft?">
+          <p>
+            <strong>Nein.</strong> Die APM Therapie nach Radloff ist eine sehr sanfte
+            Methode. Weder das Ausstreichen der Meridiane mit dem Metallstäbchen noch
+            die sanften Gelenkmobilisationen erzeugen Schmerzen. Bei empfindlichen
+            Meridian- oder Reflexzonen kann punktuell ein leichtes Ziehen spürbar
+            sein.
+          </p>
+        </Faq>
+        <Faq
+          title="Ich habe Angst vor Nadeln. Ist die APM Therapie etwas für mich?"
+        >
+          <p>
+            Die APM-Therapie verwendet keine Nadeln. Die Akupunkturpunkte werden
+            durch leichtes Schütteln behandelt. Die Behandlung ist schmerzfrei
+            und angenehm.
+          </p>
+        </Faq>
+        <Faq title="Wird die APM Therapie Behandlung von der Krankenkasse übernommen?">
+          <p>
+            <strong>Ja.</strong>, die APM Therapie nach Radloff ist in der
+            Schweiz von den meisten Krankenkassen über die Zusatzversicherung
+            für Komplementärmedizin anerkannt. Bitte klären Sie die
+            Kostenübernahme vor der Behandlung mit Ihrer Krankenkasse ab.
+          </p>
+        </Faq>
+        <Faq title="Wie viele APM Therapie Behandlungen sind notwendig?">
+          <p>
+            Bei den meisten Beschwerden empfiehlt es sich die ersten 4
+            Behandlungen im Viertages- oder einem Wochenrhythmus durchzuführen.
+            Nach 4 Behandlungen wird der Verlauf beurteilt und gemeinsam
+            entschieden, ob die Therapie fortgesetzt wird. Das Intervall kann
+            bei Bedarf auf 2 Wochen oder 1 mal pro Monat erhöht werden.
+          </p>
+        </Faq>
+        <Faq title="Können bei der APM Therapie Behandlung Nebenwirkungen auftreten?">
+          <p>
+            Gelegentlich können sich die ursprünglichen Symptome (z. B. ein
+            Rückenschmerz oder eine Kopfschmerzneigung) in den ersten 1–2 Tagen
+            nach der Behandlung leicht verstärken. Das bedeutet nicht, dass die
+            Therapie nicht wirkt – im Gegenteil: Es zeigt, dass starr gewordene
+            Blockaden wieder in Fluss geraten sind. Diese Phase klingt in der
+            Regel nach spätestens 48 Stunden ab und weicht einer spürbaren
+            Verbesserung.
+          </p>
+        </Faq>
+        <Faq
+          title="Welche körperlichen Reaktionen können nach der APM Therapie Behandlungsitzung auftreten?"
+        >
+          <p>
+            In den ersten 24 bis 48 Stunden nach der Sitzung können folgende
+            natürliche Regulationseffekte vorkommen:
+            <ul>
+              <li>
+                <strong> Verstärkte Müdigkeit oder Entspannung</strong> Tiefe Entspannung
+                oder eine angenehme Schwere through Aktivierung des Ruhenervs (Parasympathikus)
+              </li>
+              <li>
+                <strong>Muskelkater-Gefühl</strong> Nach der Behandlung des Beckens,
+                der Wirbelsäule oder den Gelenken kann es vorkommen, dass sich die
+                Muskeln und Faszien neu anpassen.
+              </li>
+              <li>
+                <strong>Verstärkter Harndrang oder Stuhlgang</strong> Die Organe (insbesondere
+                Niere und Blase) werden energetisch angeregt, um Stoffwechselprodukte
+                schneller auszuscheiden.
+              </li>
+              <li>
+                <strong>Leichte Hautrötungen</strong> An den intensiv abgestrichenen
+                Meridianbahnen kann die Haut durch die gesteigerte Durchblutung kurzzeitig
+                leicht gerötet sein.
+              </li>
+            </ul>
+          </p>
+        </Faq>
+      </FaqSection>
+    </div>
+  </Section>
+  <Section>
+    <div slot="left" style="flex-grow: 0.5;">
+      <img src={philosophie.src} alt="Sitting Buddha" />
+    </div>
+    <div slot="right">
+      <h2>Nehmen Sie Kontakt auf</h2>
+      <p>
+        Möchten Sie Ihren Energiefluss aktivieren und Beschwerden nachhaltig
+        lindern?
+      </p>
+      <p>Besuchen Sie mich in der Qi-Fluss-Praxis in Rüti.</p>
+      <a
+        class="button -blue"
+        href={`${import.meta.env.BASE_URL}/booking-qifluss-praxis-rueti/`}
+        >Termin vereinbaren</a
+      >
+    </div>
+  </Section>
+</Page>

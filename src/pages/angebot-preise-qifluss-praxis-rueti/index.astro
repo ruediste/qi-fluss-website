@@ -1,0 +1,94 @@
+---
+import apm from "../../assets/apm-therapie-radloff.jpg";
+import fussreflex from "../../assets/fussreflexzonen-massage.jpeg";
+import pavillion from "./tempel.jpg";
+import Card from "../../components/Card.astro";
+import Cards from "../../components/Cards.astro";
+import Section from "../../components/Section.astro";
+import Page from "../../layouts/Page.astro";
+---
+
+<Page
+  title="Qi Fluss Praxis Rüti"
+  description="Angebot und Preise der QiFluss Praxis in Rüti"
+  keywords={[
+    "Angebot QiFluss Praxis",
+    "Preise APM Therapie Rüti",
+    "Fussreflexzonenmassage Preise",
+    "Schmerztherapie Preise",
+    "QiFluss Praxis Rüti",
+    "Krankenkassenanerkannt",
+  ]}
+  image={pavillion}
+>
+ 
+  <Section>
+    <div slot="left"> <h1 style="max-width: 40em;">Angebote und Preise <br>Qifluss Praxis in Rüti</h1></div>
+    <div slot="right"></div>
+  </Section>
+  <Section>
+    <div slot="left"></div>
+    <div slot="right">
+      <h2>Bringen Sie Ihre Lebensenergie wieder in Fluss</h2>
+      <p>
+        Viele Beschwerden entstehen nicht plötzlich. Sie entwickeln sich über
+        längere Zeit durch Stress, Überlastung oder fehlende Regeneration. Bei
+        länger bestehenden Beschwerden kann eine einzelne Behandlung oft nur
+        begrenzt wirken. Für eine nachhaltige Veränderung empfehle ich meist
+        mehrere Sitzungen, in denen wir gezielt und Schritt für Schritt an den
+        Ursachen arbeiten.
+      </p>
+      <p><b>Unverbindlich anrufen & informieren: 078 608 70 32</b></p>
+    </div>
+  </Section>
+  <Cards>
+    <Card
+      number={1}
+      image={apm}
+      action={{
+        label: "APM Therapie buchen",
+        href: "booking-qifluss-praxis-rueti",
+      }}
+    >
+      <h2>APM Therapie Radloff</h2>
+      <ul>
+        <li>akuten körperlichen Beschwerden</li>
+        <li>Rücken- oder Nackenschmerzen</li>
+        <li>Chronische Schmerzen</li>
+        <li>Stress und innerer Unruhe & Erschöpfung</li>
+      </ul>
+
+      <dl>
+        <dt>Dauer</dt>
+        <dd>1 Sitzung à 60 Minuten</dd>
+
+        <dt>Preis</dt>
+        <dd>CHF 120.–</dd>
+      </dl>
+    </Card>
+    <Card
+      number={2}
+      image={fussreflex}
+      action={{
+        label: "Fussreflexzonen Massage buchen",
+        href: "booking-qifluss-praxis-rueti",
+      }}
+    >
+      <h2>Fussreflexzonen Massage</h2>
+      <ul>
+        <li>Tiefenentspannung & Stressabbau</li>
+        <li>Verspannungen und Muskelbeschwerden</li>
+        <li>Entgiftung & Anregung Stoffwechsel</li>
+        <li>Verdauung & Immunsystem</li>
+      </ul>
+
+      <dl>
+        <dt>Dauer</dt>
+        <dd>1 Sitzung à 60 Minuten</dd>
+
+        <dt>Preis</dt>
+        <dd>CHF 120.–</dd>
+      </dl>
+    </Card>
+  </Cards>
+</Page>

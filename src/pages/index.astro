@@ -1,0 +1,225 @@
+---
+import apm from "../assets/apm-therapie-radloff.jpg";
+import fussreflex from "../assets/fussreflexzonen-massage.jpeg";
+import portrait from "../assets/nina-steinmann-qifluss-praxis.jpg";
+import philosophie from "../assets/praxis-philosophie-qifluss-praxis.jpg";
+import sitzecke from "../assets/praxis-sitzecke.jpg";
+import title from "../assets/qifluss-praxis-schmerztherapie-rueti.jpeg";
+import CallToActionLink from "../components/CallToActionLink.astro";
+import Quote from "../components/Quote.astro";
+import Section from "../components/Section.astro";
+import Stack from "../components/Stack.astro";
+import Page from "../layouts/Page.astro";
+---
+
+<Page
+  title="APM-Therapie & Schmerztherapie Rüti ZH | QiFluss Praxis"
+  description="Ganzheitliche Schmerztherapie, APM-Therapie nach Radloff & Fussreflexzonenmassage in Rüti ZH. Blockaden lösen & Beschwerden lindern. Jetzt Termin buchen!"
+  keywords={[
+    "APM Therapie Rüti",
+    "Schmerztherapie Rüti",
+    "QiFluss Praxis",
+    "Akupunktur Massage nach Radloff",
+    "Ganzheitliche Therapie",
+    "Fussreflexzonenmassage",
+    "Traditionelle Chinesische Medizin",
+  ]}
+  image={title}
+>
+  <Section>
+    <h1 slot="left">Ganzheitliche Schmerztherapie <br />in Rüti ZH</h1>
+    <div slot="right"></div>
+  </Section>
+  <Section>
+    <div slot="left"></div>
+    <div slot="right">
+      <h2>Wenn Körper, Geist und Seele aus dem Takt geraten...</h2>
+      <p>
+        Kennen Sie das? Schmerzen im Rücken oder im Nacken begleiten Sie durch
+        den Alltag. Verspannungen wollen einfach nicht nachlassen, obwohl Sie
+        schon verschiedenes ausprobiert haben. Vielleicht fühlen Sie sich oft
+        erschöpft, schlafen unruhig oder merken, wie die körperliche Belastung
+        langsam auch auf das Gemüt schlägt. Wenn Schmerzen oder Erschöpfung zum
+        Dauerzustand werden, verlieren wir Stück für Stück das Vertrauen in den
+        eigenen Körper.
+      </p>
+      <h2>Gemeinsamer Weg zu mehr Lebensqualität</h2>
+      <p>
+        In meiner Praxis unterstütze ich Sie dabei, die Ursachen Ihrer
+        Beschwerden gezielt anzugehen und den freien Fluss des Qi – Ihrer
+        Lebensenergie – wiederherzustellen.
+      </p>
+      <a
+        class="button -blue"
+        href={`${import.meta.env.BASE_URL}/apm-therapie-rueti/`}
+        >Termin vereinbaren</a
+      >
+    </div>
+  </Section>
+  <Section color="normal">
+    <Stack slot="left">
+      <img
+        src={philosophie.src}
+        alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
+      />
+    </Stack>
+    <div slot="right">
+      <h2>Echte Veränderung statt schnelle Symptombekämpfung</h2>
+      <ul>
+        <li>
+          <strong>Zeit & Raum für Sie</strong>: In einer ausführlichen
+          Erstanamnese betrachten wir Ihre Beschwerden, Ihren Lebensstil,
+          Ernährung und mentale Belastungen.
+        </li>
+        <li>
+          <strong>Ursachen im Blick</strong>: Ich behandle nicht nur das
+          Symptom, sondern gehe dem tieferliegenden Auslöser auf den Grund.
+        </li>
+        <li>
+          <strong>Individuelle Behandlung</strong>: Keine Standardrezepte – die
+          Behandlung wird individuell auf Sie zugeschnitten.
+        </li>
+        <li>
+          <strong>Selbstheilung aktivieren</strong>: Ich begleite Sie dabei, die
+          natürlichen Selbstheilungskräfte Ihres Körpers nachhaltig zu stärken.
+        </li>
+        <li><strong>Krankenkassenanerkannt</strong></li>
+      </ul>
+    </div>
+  </Section>
+  <Section>
+    <div slot="left">
+      <h2>APM Therapie nach Radloff – Schmerzen an der Wurzel behandeln</h2>
+      <p>
+        Die APM-Therapie nach Radloff verbindet das Wissen der Chinesischen
+        Medizin mit westlichen Manualtherapien wie der Ostheopathie. Mittels
+        eines Stäbchens werden die Meridiane sanft gestrichen und
+        Akupunkturpunkte gezielt stimuliert – ganz ohne Nadeln.
+      </p>
+
+      <div class="p-list-header">Wirkungsweise</div>
+      <ul>
+        <li>
+          Energie im Fluss - Schmerzlinderung durch energetische Behandlung
+        </li>
+        <li>
+          Sanfte Mobilisation des Beckens, der Wirbelsäule und der Gelenke
+        </li>
+        <li>Aktivierung der Selbstheilungskräfte</li>
+      </ul>
+
+      <div class="p-list-header">Geeignet für</div>
+      <ul>
+        <li>
+          Beschwerden des Bewegungsapparats wie Rückenschmerz, Gelenkschmerzen,
+          Schleudertrauma
+        </li>
+        <li>Kopfschmerzen, Migräne</li>
+        <li>Stress & Erschöpfung</li>
+        <li>Verdauungsbeschwerden, gynäkologische Beschwerden</li>
+      </ul>
+    </div>
+    <Stack slot="right">
+      <img src={apm.src} alt="Sitting Buddha" />
+      <CallToActionLink href={"booking-qifluss-praxis-rueti"}
+        >{"APM Therapie buchen"}</CallToActionLink
+      >
+    </Stack>
+  </Section>
+  <Section color="normal">
+    <div slot="left">
+      <h2>Fussreflexzonenmassage – Impulse für den gesamten Körper</h2>
+      <div class="p-list-header">Wirkungsweise</div>
+      <ul>
+        <li>
+          Aktivierung der Selbstheilungskräfte und Stärkung des Immunsystems
+        </li>
+        <li>
+          Förderung der Durchblutung und des Lymphabflusses im gesamten Körper
+        </li>
+        <li>Tiefenentspannung und Ausgleich des Nervensystems</li>
+      </ul>
+
+      <div class="p-list-header">Geeignet für</div>
+      <ul>
+        <li>Stress, Erschöpfung & Schlafstörungen</li>
+        <li>Verdauungsbeschwerden & Stoffwechselträgheit</li>
+        <li>Zyklus- & gynäkologische Beschwerden</li>
+        <li>Kreislauf- & Lymphbelastungen</li>
+      </ul>
+    </div>
+    <Stack slot="right">
+      <img src={fussreflex.src} alt="Sitting Buddha" />
+      <CallToActionLink href={"booking-qifluss-praxis-rueti"}
+        >{"Fussreflexzonen Massage buchen"}</CallToActionLink
+      >
+    </Stack>
+  </Section>
+  <Section>
+    <Stack slot="left">
+      <img src={portrait.src} alt="Nina Steinmann QiFluss Praxis" />
+    </Stack>
+    <div slot="right" style="flex-grow: 3;">
+      <h2>Nina Steinmann</h2>
+      <p>
+        Ich weiss aus eigener Erfahrung und meiner täglichen Arbeit, wie
+        belastend körperliche Einschränkungen sein können. In meiner Praxis in
+        Rüti ZH biete ich Ihnen einen geschützten, ruhigen Raum, in dem Sie sich
+        vollkommen entspannen können. Mit Achtsamkeit, fundierter Ausbildung und
+        einer ganzheitlichen Sichtweise begleite ich Sie Schritt für Schritt
+        zurück zu mehr Wohlbefinden, Energie und Leichtigkeit.
+      </p>
+      <a
+        class="button -blue"
+        href={`${import.meta.env.BASE_URL}/about-qifluss-praxis-rueti/`}
+        >mehr über mich</a
+      >
+    </div>
+  </Section>
+  <Quote> Stilles Herz, freies Qi, klarer Geist. </Quote>
+
+  <Section>
+    <div slot="left"><h2>Das sagen meine Klienten</h2></div>
+    <div slot="right">
+      <p>
+        "Ich habe mich von Anfang an sehr wohl und gut aufgehoben gefühlt. Nina
+        ist eine herzliche, einfühlsame und professionelle Therapeutin. Die
+        Behandlung war wohltuend und entspannend. Danach fühlte ich mich
+        ausgeglichen und voller neuer Energie. Ich kann sie von Herzen
+        weiterempfehlen."
+      </p>
+      <p>N.N. aus Winterthur</p>
+    </div>
+  </Section>
+  <Section color="normal">
+    <Stack slot="left">
+      <img
+        src={sitzecke.src}
+        alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
+      />
+    </Stack>
+    <div slot="right" style="flex-grow: 2;">
+      <h2>Ablauf & Abrechnung über die Krankenkasse</h2>
+      <ul>
+        <li>
+          <strong>Krankenkassen-Anerkennung</strong>: Ich bin EMR-anerkannt
+        </li>
+        <li>
+          <strong>Persönliche Kostengutsprache</strong>: Bitte erkundigen Sie
+          sich vorab bei Ihrer Versicherung.
+        </li>
+      </ul>
+
+      <h2>Praxisstandort & Termine</h2>
+      <p>
+        Die QiFluss Praxis befindet sich zentral und gut erreichbar in Rüti im
+        Zürcher Oberland.
+      </p>
+      <a
+        class="button -blue"
+        href={`${import.meta.env.BASE_URL}/booking-qifluss-praxis-rueti/`}
+        >Termin vereinbaren</a
+      >
+    </div>
+  </Section>
+</Page>
