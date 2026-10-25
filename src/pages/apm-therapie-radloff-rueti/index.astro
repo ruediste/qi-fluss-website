@@ -4,6 +4,7 @@ import Card from "../../components/Card.astro";
 import Cards from "../../components/Cards.astro";
 import Faq from "../../components/Faq.astro";
 import FaqSection from "../../components/FaqSection.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Section from "../../components/Section.astro";
 import Page from "../../layouts/Page.astro";
 import apmanamnese from "./apm-therapie-radloff-anamnese-qifluss-praxis-rueti.jpeg";
@@ -71,14 +72,17 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
       </p>
     </div>
     <div slot="right">
-      <img
-        src={apm.src}
+      <SectionImage
+        src={apm}
         alt="Ganzheitliche Schmerztherapie APM Therapie QiFluss Praxis Rüti"
       />
     </div>
   </Section>
   <Section>
-    <!--  <div><img src={philosophie.src} alt="Sitting Buddha" /></div> -->
+    <!--  <div><SectionImage
+        src={philosophie}
+        alt="Sitting Buddha"
+      /></div> -->
     <div slot="left">
       <h2>
         Wie unterscheidet sich APM Therapie von der klassischen Akupunktur?
@@ -115,7 +119,10 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
   </Section>
   <Section color="normal">
     <div slot="left">
-      <img src={medizin.src} alt="Anwendungsgebiete APM Therapie Radloff" />
+      <SectionImage
+        src={medizin}
+        alt="Anwendungsgebiete APM Therapie Radloff"
+      />
     </div>
     <div slot="right">
       <h2>Anwendungsgebiete: Wann hilft APM-Therapie?</h2>
@@ -204,7 +211,10 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
   </Cards>
   <Section color="normal">
     <!--     <div slot="left" style="flex-grow: 0.5;">
-      <img src={philosophie.src} alt="Sitting Buddha" />
+      <SectionImage
+        src={philosophie}
+        alt="Sitting Buddha"
+      />
     </div> -->
     <div slot="right">
       <h2>Häufig gestellte Fragen</h2>
@@ -293,7 +303,10 @@ import philosophie from "./qifluss-praxis-philosophie-2.jpg";
   </Section>
   <Section>
     <div slot="left" style="flex-grow: 0.5;">
-      <img src={philosophie.src} alt="Sitting Buddha" />
+      <SectionImage
+        src={philosophie}
+        alt="Sitting Buddha"
+      />
     </div>
     <div slot="right">
       <h2>Nehmen Sie Kontakt auf</h2>

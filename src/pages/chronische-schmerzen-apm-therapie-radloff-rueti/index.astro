@@ -4,6 +4,7 @@ import sitzecke from "../../assets/praxis-sitzecke.jpg";
 import CallToActionLink from "../../components/CallToActionLink.astro";
 import Faq from "../../components/Faq.astro";
 import FaqSection from "../../components/FaqSection.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Section from "../../components/Section.astro";
 import Stack from "../../components/Stack.astro";
 import Page from "../../layouts/Page.astro";
@@ -94,8 +95,8 @@ import wald from "./wald-sonne.jpg";
       </ul>
     </div>
     <div slot="right">
-      <img
-        src={fluss.src}
+      <SectionImage
+        src={fluss}
         alt="Ganzheitliche Schmerztherapie Rückenschmerzen APM Therapie Radloff QiFluss Praxis Rüti ZH"
       />
     </div>
@@ -133,8 +134,8 @@ import wald from "./wald-sonne.jpg";
       </ol>
     </div>
     <!-- <Stack slot="right">
-      <img
-        src={buddha.src}
+      <SectionImage
+        src={buddha}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack> -->
@@ -142,8 +143,8 @@ import wald from "./wald-sonne.jpg";
 
   <Section color="normal">
     <div slot="left">
-      <img
-        src={buddha.src}
+      <SectionImage
+        src={buddha}
         alt="Ganzheitliche Schmerztherapie Chronische Schmerzen APM Therapie Radloff QiFluss Praxis Rüti ZH"
       />
     </div>
@@ -197,8 +198,8 @@ import wald from "./wald-sonne.jpg";
       </ul>
     </div>
     <Stack slot="right">
-      <img
-        src={apmtherapie.src}
+      <SectionImage
+        src={apmtherapie}
         alt="APM Therapie Radloff hilft bei chronischen Schmerzen"
       />
       <CallToActionLink href={"apm-therapie-radloff-rueti"}
@@ -246,8 +247,8 @@ import wald from "./wald-sonne.jpg";
   </Section>
   <Section>
     <Stack slot="left">
-      <img
-        src={sitzecke.src}
+      <SectionImage
+        src={sitzecke}
         alt="Ganzheitliche Schmerztherapie chronische Schmerzen APM Therapie Radloff QiFluss Praxis Rüti ZH"
       />
     </Stack>
@@ -258,6 +259,10 @@ import wald from "./wald-sonne.jpg";
         Schmerzkreislauf auszusteigen. Ich freue mich darauf, Sie auf Ihrem Weg
         zu mehr Lebensqualität zu begleiten.
       </p>
+      <p style="padding-top: 1.5rem;">QiFluss Praxis - Nina Steinmann</p>
+      <p>Ferrachstrasse 9, 8630 Rüti ZH</p>
+      <p>Telefon: 078 608 70 32</p>
+      <p>E-Mail: nina@qi-fluss-praxis.ch</p>
       <a
         class="button -blue"
         href="/booking-qifluss-praxis-rueti/"

@@ -2,6 +2,7 @@
 import fussreflex2 from "../../assets/fussreflexzonen-massage.jpeg";
 import teeezeremonie from "../../assets/Teezeremonie.jpg";
 import Section from "../../components/Section.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Page from "../../layouts/Page.astro";
 import fusssreflex from "./fussmassage.jpg";
 ---
@@ -52,7 +53,7 @@ import fusssreflex from "./fussmassage.jpg";
         regt die Durchblutung an, löst Energieblockaden und unterstützt den
         Körper dabei, wieder in sein natürliches Gleichgewicht zu finden.
       </p>
-      <ol>
+      <ul>
         <li>
           <strong>Zehenbereich</strong>: Steht in Verbindung mit Kopf, Nacken
           und Sinnesorganen.
@@ -69,17 +70,23 @@ import fusssreflex from "./fussmassage.jpg";
           <strong>Ferse & Knöchel</strong>: Steht stellvertretend für das
           Becken, den Unterleib und die Beine.
         </li>
-      </ol>
+      </ul>
     </div>
     <div slot="right">
-      <img src={fussreflex2.src} alt="Sitting Buddha" />
+      <SectionImage
+        src={fussreflex2}
+        alt="Sitting Buddha"
+      />
     </div>
   </Section>
   <Section>
-    <!-- <div><img src={philosophie.src} alt="Sitting Buddha" /></div> -->
+    <!-- <div><SectionImage
+        src={philosophie}
+        alt="Sitting Buddha"
+      /></div> -->
     <div slot="left">
       <h2>Positive Wirkungen der Behandlung</h2>
-      <ol type="1">
+      <ul>
         <li>
           <b>Tiefenentspannung & Stressabbau</b>: Beruhigt das Nervensystem und
           baut Alltagsstress nachhaltig ab.
@@ -100,11 +107,14 @@ import fusssreflex from "./fussmassage.jpg";
           <b>Förderung des Energieflusses (Qi)</b>: Harmonisiert
           Magen-Darm-Funktionen und stärkt die Abwehrkräfte.
         </li>
-      </ol>
+      </ul>
     </div>
   </Section>
   <Section color="normal">
-    <div slot="left"><img src={teeezeremonie.src} alt="Sitting Buddha" /></div>
+    <div slot="left"><SectionImage
+        src={teeezeremonie}
+        alt="Sitting Buddha"
+      /></div>
     <div slot="right">
       <h2>Wie läuft eine Fussreflexzonenmassage in der Qi-Fluss-Praxis ab?</h2>
       <h3>Persönliches Erstgespräch</h3>

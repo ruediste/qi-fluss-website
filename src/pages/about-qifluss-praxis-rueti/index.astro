@@ -2,6 +2,7 @@
 import portrait from "../../assets/portraitNinaWide.jpeg";
 import CallToActionLink from "../../components/CallToActionLink.astro";
 import Section from "../../components/Section.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Page from "../../layouts/Page.astro";
 import energie from "./buddha-qifluss-praxis1.jpeg";
 ---
@@ -84,7 +85,10 @@ import energie from "./buddha-qifluss-praxis1.jpeg";
       </ul>
     </div>
     <div slot="right">
-      <img src={energie.src} alt="Ausbildung Nina Steinmann" />
+      <SectionImage
+        src={energie}
+        alt="Ausbildung Nina Steinmann"
+      />
       <CallToActionLink href={"booking-qifluss-praxis-rueti"}
         >{"Termin buchen"}</CallToActionLink
       >

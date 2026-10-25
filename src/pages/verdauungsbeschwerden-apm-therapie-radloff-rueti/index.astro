@@ -1,6 +1,7 @@
 ---
 import CallToActionLink from "../../components/CallToActionLink.astro";
 import Section from "../../components/Section.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Stack from "../../components/Stack.astro";
 import FaqSection from "../../components/FaqSection.astro";
 import Faq from "../../components/Faq.astro";
@@ -92,8 +93,8 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
       </ul>
     </div>
     <div slot="right">
-      <img
-        src={zen.src}
+      <SectionImage
+        src={zen}
         alt="Ganzheitliche Schmerztherapie bei Verdauungsbeschwerden APM Therapie Radloff QiFluss Praxis Rüti ZH"
       />
     </div>
@@ -127,8 +128,8 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
       </ol>
     </div>
     <!-- <Stack slot="right">
-      <img
-        src={buddha.src}
+      <SectionImage
+        src={buddha}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack> -->
@@ -136,8 +137,8 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
 
   <Section color="normal">
     <div slot="left">
-      <img
-        src={buddha.src}
+      <SectionImage
+        src={buddha}
         alt="Ganzheitliche Schmerztherapie bei Verdauungsbeschwerden APM Therapie Radloff QiFluss Praxis Rüti ZH"
       />
     </div>
@@ -190,8 +191,8 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
       </ul>
     </div>
     <Stack slot="right">
-      <img
-        src={apmtherapie.src}
+      <SectionImage
+        src={apmtherapie}
         alt="APM Therapie Radloff hilft bei Verdauungsbeschwerden, Reizdarm, Blähbauch, Völlegefühl in Rüti ZH"
       />
       <CallToActionLink href={"apm-therapie-radloff-rueti"}
@@ -201,7 +202,10 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
   </Section>
   <Section color="normal">
     <!--     <div slot="left" style="flex-grow: 0.5;">
-      <img src={philosophie.src} alt="Sitting Buddha" />
+      <SectionImage
+        src={philosophie}
+        alt="Sitting Buddha"
+      />
     </div> -->
     <div slot="right">
       <h2>Häufig gestellte Fragen FAQ's</h2>
@@ -228,8 +232,8 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
   </Section>
   <Section>
     <Stack slot="left">
-      <img
-        src={sitzecke.src}
+      <SectionImage
+        src={sitzecke}
         alt="Ganzheitliche Schmerztherapie bei Verdauungsbeschwerden APM Therapie Radloff QiFluss Praxis Rüti ZH"
       />
     </Stack>
@@ -242,6 +246,10 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
         Alltag. Ich freue mich darauf, Sie in der QiFluss Praxis in Rüti zu
         begrüssen!
       </p>
+      <p style="padding-top: 1.5rem;">QiFluss Praxis - Nina Steinmann</p>
+      <p>Ferrachstrasse 9, 8630 Rüti ZH</p>
+      <p>Telefon: 078 608 70 32</p>
+      <p>E-Mail: nina@qi-fluss-praxis.ch</p>
       <a
         class="button -blue"
 href="/booking-qifluss-praxis-rueti/"        style="max-width: 14rem;">Termin vereinbaren</a

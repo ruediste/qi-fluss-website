@@ -5,6 +5,7 @@ import CallToActionLink from "../../components/CallToActionLink.astro";
 import Faq from "../../components/Faq.astro";
 import FaqSection from "../../components/FaqSection.astro";
 import Section from "../../components/Section.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Stack from "../../components/Stack.astro";
 import Page from "../../layouts/Page.astro";
 import baum from "./baumstamm.jpg";
@@ -82,8 +83,8 @@ import bonsai from "./wald-moos.jpg";
       </p>
     </div>
     <div slot="right">
-      <img
-        src={bonsai.src}
+      <SectionImage
+        src={bonsai}
         alt="Ganzheitliche Schmerztherapie Rückenschmerzen APM Therapie RadloffQiFluss Praxis Rüti ZH"
       />
     </div>
@@ -124,8 +125,8 @@ import bonsai from "./wald-moos.jpg";
       </ol>
     </div>
     <!-- <Stack slot="right">
-      <img
-        src={buddha.src}
+      <SectionImage
+        src={buddha}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack> -->
@@ -133,8 +134,8 @@ import bonsai from "./wald-moos.jpg";
 
   <Section color="normal">
     <div slot="left">
-      <img
-        src={wurzeln.src}
+      <SectionImage
+        src={wurzeln}
         alt="Ganzheitliche Schmerztherapie orthopädische Beschwerden APM Therapie RadloffQiFluss Praxis Rüti ZH"
       />
     </div>
@@ -194,8 +195,8 @@ import bonsai from "./wald-moos.jpg";
       </ul>
     </div>
     <Stack slot="right">
-      <img
-        src={apmtherapie.src}
+      <SectionImage
+        src={apmtherapie}
         alt="APM Therapie Radloff hilft bei orthopädischen Beschwerden ganzheitlich und nachhaltig"
       />
       <CallToActionLink href={"apm-therapie-radloff-rueti"}
@@ -205,7 +206,10 @@ import bonsai from "./wald-moos.jpg";
   </Section>
   <Section color="normal">
     <!--     <div slot="left" style="flex-grow: 0.5;">
-      <img src={philosophie.src} alt="Sitting Buddha" />
+      <SectionImage
+        src={philosophie}
+        alt="Sitting Buddha"
+      />
     </div> -->
     <div slot="right">
       <h2>Häufig gestellte Fragen FAQ's</h2>
@@ -235,8 +239,8 @@ import bonsai from "./wald-moos.jpg";
   </Section>
   <Section>
     <Stack slot="left">
-      <img
-        src={sitzecke.src}
+      <SectionImage
+        src={sitzecke}
         alt="Ganzheitliche Schmerztherapie bei orthopädischen Beschwerden QiFluss Praxis Rüti ZH"
       />
     </Stack>
@@ -247,6 +251,10 @@ import bonsai from "./wald-moos.jpg";
         mich darauf, Sie in der QiFluss Praxis in Rüti auf Ihrem Weg zu mehr
         Beweglichkeit zu begleiten.
       </p>
+      <p style="padding-top: 1.5rem;">QiFluss Praxis - Nina Steinmann</p>
+      <p>Ferrachstrasse 9, 8630 Rüti ZH</p>
+      <p>Telefon: 078 608 70 32</p>
+      <p>E-Mail: nina@qi-fluss-praxis.ch</p>
       <a
         class="button -blue"
         href="/booking-qifluss-praxis-rueti/"

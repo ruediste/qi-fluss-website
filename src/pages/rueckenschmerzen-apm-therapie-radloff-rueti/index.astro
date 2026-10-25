@@ -3,11 +3,12 @@ import apmtherapie from "../../assets/apm-therapie-radloff.jpg";
 import sitzecke from "../../assets/praxis-sitzecke.jpg";
 import CallToActionLink from "../../components/CallToActionLink.astro";
 import Section from "../../components/Section.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Stack from "../../components/Stack.astro";
 import Page from "../../layouts/Page.astro";
 import baeume from "./bonsai-baeume-rueckenschmerzen.jpg";
 import bonsai from "./bonsai-hand.jpg";
-import waldweg from "./wald-weg.jpg";
+import waldweg from "./baum-mensch.jpg";
 ---
 
 <Page
@@ -51,8 +52,8 @@ import waldweg from "./wald-weg.jpg";
       </p>
     </div>
   </Section>
-  <Section color="normal">
-    <div slot="left">
+  <Section color="normal" >
+    <div slot="left" style="flex-grow: 1.5;">
       <h2>Warum Rückenschmerzen oft nicht dort entstehen, wo sie wehtun</h2><p>
         In der westlichen Medizin wird bei Rückenschmerzen häufig nur das
         schmerzende Segment behandelt. Die APM Therapie verfolgt einen
@@ -74,8 +75,8 @@ import waldweg from "./wald-weg.jpg";
       </p>
     </div>
     <div slot="right">
-      <img
-        src={waldweg.src}
+      <SectionImage
+        src={waldweg}
         alt="Ganzheitliche Schmerztherapie Rückenschmerzen APM Therapie RadloffQiFluss Praxis Rüti ZH"
       />
     </div>
@@ -113,8 +114,8 @@ import waldweg from "./wald-weg.jpg";
       </ol>
     </div>
     <!-- <Stack slot="right">
-      <img
-        src={buddha.src}
+      <SectionImage
+        src={buddha}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack> -->
@@ -122,8 +123,8 @@ import waldweg from "./wald-weg.jpg";
 
   <Section color="normal">
     <div slot="left">
-      <img
-        src={bonsai.src}
+      <SectionImage
+        src={bonsai}
         alt="Ganzheitliche Schmerztherapie Rückenschmerzen APM Therapie RadloffQiFluss Praxis Rüti ZH"
       />
     </div>
@@ -177,8 +178,8 @@ import waldweg from "./wald-weg.jpg";
       </ul>
     </div>
     <Stack slot="right">
-      <img
-        src={apmtherapie.src}
+      <SectionImage
+        src={apmtherapie}
         alt="APM Therapie Radloff hilft bei Rückenschmerzen ganzheitlich und nachhaltig"
       />
       <CallToActionLink href={"booking-qifluss-praxis-rueti"}
@@ -188,8 +189,8 @@ import waldweg from "./wald-weg.jpg";
   </Section>
   <Section color="normal">
     <Stack slot="left">
-      <img
-        src={sitzecke.src}
+      <SectionImage
+        src={sitzecke}
         alt="Ganzheitliche Schmerztherapie Rückenschmerzen QiFluss Praxis Rüti ZH"
       />
     </Stack>
@@ -200,6 +201,10 @@ import waldweg from "./wald-weg.jpg";
         von lästigen Rückenschmerzen. Ich freue mich darauf, Sie in der QiFluss
         Praxis in Rüti zu begrüssen!
       </p>
+      <p style="padding-top: 1.5rem;">QiFluss Praxis - Nina Steinmann</p>
+      <p>Ferrachstrasse 9, 8630 Rüti ZH</p>
+      <p>Telefon: 078 608 70 32</p>
+      <p>E-Mail: nina@qi-fluss-praxis.ch</p>
       <a
         class="button -blue"
         href="/booking-qifluss-praxis-rueti/"

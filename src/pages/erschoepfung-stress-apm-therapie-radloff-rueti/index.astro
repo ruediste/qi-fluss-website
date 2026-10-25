@@ -4,6 +4,7 @@ import sitzecke from "../../assets/praxis-sitzecke.jpg";
 import CallToActionLink from "../../components/CallToActionLink.astro";
 import Faq from "../../components/Faq.astro";
 import FaqSection from "../../components/FaqSection.astro";
+import SectionImage from "../../components/SectionImage.astro";
 import Section from "../../components/Section.astro";
 import Stack from "../../components/Stack.astro";
 import Page from "../../layouts/Page.astro";
@@ -102,8 +103,8 @@ import zen from "./torji.jpg";
       </ul>
     </div>
     <div slot="right">
-      <img
-        src={zen.src}
+      <SectionImage
+        src={zen}
         alt="Ganzheitliche Schmerztherapie Rückenschmerzen APM Therapie RadloffQiFluss Praxis Rüti ZH"
       />
     </div>
@@ -142,8 +143,8 @@ import zen from "./torji.jpg";
       </ol>
     </div>
     <!-- <Stack slot="right">
-      <img
-        src={buddha.src}
+      <SectionImage
+        src={buddha}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack> -->
@@ -151,8 +152,8 @@ import zen from "./torji.jpg";
 
   <Section color="normal">
     <div slot="left">
-      <img
-        src={steg.src}
+      <SectionImage
+        src={steg}
         alt="Ganzheitliche Schmerztherapie Rückenschmerzen APM Therapie RadloffQiFluss Praxis Rüti ZH"
       />
     </div>
@@ -204,8 +205,8 @@ import zen from "./torji.jpg";
       </ul>
     </div>
     <Stack slot="right">
-      <img
-        src={apmtherapie.src}
+      <SectionImage
+        src={apmtherapie}
         alt="APM Therapie Radloff hilft bei Stress & Erschöpfung ganzheitlich und nachhaltig"
       />
       <CallToActionLink href={"apm-therapie-radloff-rueti"}
@@ -215,7 +216,10 @@ import zen from "./torji.jpg";
   </Section>
   <Section color="normal">
     <!--     <div slot="left" style="flex-grow: 0.5;">
-      <img src={philosophie.src} alt="Sitting Buddha" />
+      <SectionImage
+        src={philosophie}
+        alt="Sitting Buddha"
+      />
     </div> -->
     <div slot="right">
       <h2>Häufig gestellte Fragen FAQ's</h2>
@@ -247,21 +251,21 @@ import zen from "./torji.jpg";
   </Section>
   <Section>
     <Stack slot="left">
-      <img
-        src={sitzecke.src}
+      <SectionImage
+        src={sitzecke}
         alt="Ganzheitliche Schmerztherapie QiFluss Praxis Rüti ZH"
       />
     </Stack>
     <div slot="right" style="flex-grow: 2;">
       <h2>Tanken Sie neue Lebenskraft & innere Ruhe</h2>
-      <p>
+      <p >
         Geben Sie Ihrem Körper den Raum, den er zur Regeneration braucht. Ich
         freue mich darauf, Sie in meiner Praxis zu begrüssen!
       </p>
-      <p>QiFluss Praxis – Nina Steinmann</p>
-      <p>📍Ferrachstrasse 9, 8630 Rüti ZH</p>
-      <p>📞 Telefon: 078 608 70 32</p>
-      <p>✉️ E-Mail: nina@qi-fluss-praxis.ch</p>
+      <p style="padding-top: 1.5rem;">QiFluss Praxis - Nina Steinmann</p>
+      <p>Ferrachstrasse 9, 8630 Rüti ZH</p>
+      <p>Telefon: 078 608 70 32</p>
+      <p>E-Mail: nina@qi-fluss-praxis.ch</p>
       <a
         class="button -blue"
         href="/booking-qifluss-praxis-rueti/"
