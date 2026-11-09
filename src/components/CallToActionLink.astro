@@ -4,9 +4,15 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : import.meta.env.BASE_URL + "/";
 const { href } = Astro.props;
+
+// remove leading slash and ensure trailing slash for href
+let hrefCleaned = href.startsWith("/") ? href.slice(1) : href;
+if (!hrefCleaned.endsWith("/")) {
+  hrefCleaned = hrefCleaned + "/";
+}
 ---
 
-<a href={base + href} class="callToActionLink">
+<a href={base + hrefCleaned} class="callToActionLink">
   <slot />
   <svg
     class="callToActionLink__icon"
@@ -20,41 +26,39 @@ const { href } = Astro.props;
 </a>
 
 <style lang="scss">
+  .callToActionLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 88px;
+    padding: 0 50px 0 40px;
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #0c1047;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background-color 160ms ease;
 
-.callToActionLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 88px;
-  padding: 0 50px 0 40px;
-  text-decoration: none;
-  color: #fff !important;
-  background-color: #0c1047;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  transition: background-color 160ms ease;
+    &__icon {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.25;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-  &__icon {
-    flex: 0 0 28px;
-    width: 28px;
-    height: 28px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.25;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    &:hover,
+    &:focus-visible {
+      background-color: #4caf50;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #171b1f;
+      outline-offset: 3px;
+    }
   }
-
-  &:hover,
-  &:focus-visible {
-    background-color: #4caf50;
-  }
-
-  &:focus-visible {
-    outline: 2px solid #171b1f;
-    outline-offset: 3px;
-  }
-}
-
 </style>
